@@ -168,5 +168,38 @@ data = json.loads((common.DOCS_DIR / "analytics.json").read_text())
 assert data["account"]["followers_count"] == 123 and len(data["posts"]) == 1
 assert data["posts"][0]["metrics"]["reach"] == 10
 
+# ---- 9. prompt memuat panduan gaya ramah
+prompt = gen.build_prompt(brand, ["topik lama"], gen._weighted_pillars(brand, 5))
+assert "Bunda" in prompt and "HANGAT (tiru)" in prompt and "topik lama" in prompt
+
+# ---- 10. Gemini: model 404 -> otomatis pindah ke model cadangan (tanpa menunggu/mengulang)
+gem_calls = []
+
+
+class _R:
+    def __init__(self, code, payload=None):
+        self.status_code, self._p = code, payload or {}
+        self.text = json.dumps(self._p)
+
+    def json(self):
+        return self._p
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(self.status_code)
+
+
+def fake_gem_post(url, **kw):
+    gem_calls.append(url)
+    if "gemini-3.1-flash-lite" in url:
+        return _R(404)
+    return _R(200, {"candidates": [{"content": {"parts": [{"text": json.dumps([{"hook": "x"}])}]}}]})
+
+
+gen.requests.post = fake_gem_post
+os.environ.pop("GEMINI_MODEL", None)
+assert gen.call_gemini("p") == [{"hook": "x"}]
+assert len(gem_calls) == 2 and "gemini-3-flash-preview" in gem_calls[1], gem_calls
+
 shutil.rmtree(TMP)
 print("Semua uji lulus.")

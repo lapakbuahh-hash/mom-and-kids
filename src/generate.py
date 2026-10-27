@@ -24,31 +24,31 @@ MAX_CAPTION = 2200
 
 SAMPLE_POSTS = [
     {
-        "pillar": "Edukasi",
-        "topic": "Aktivitas 10 menit sebelum tidur siang",
-        "hook": "3 kegiatan tenang 10 menit untuk anak sebelum tidur siang",
-        "subhook": "Tanpa alat mahal, cukup yang ada di rumah",
+        "pillar": "Main Seru",
+        "topic": "Kegiatan tenang 10 menit sebelum tidur siang",
+        "hook": "Bun, 3 kegiatan tenang 10 menit sebelum si kecil tidur siang",
+        "subhook": "Nggak perlu alat mahal, pakai yang ada di rumah aja",
         "slides": [
-            {"heading": "Susun balok warna", "body": "Minta si kecil mengurutkan balok atau tutup botol dari warna paling terang ke paling gelap. Melatih fokus dan mengenal warna."},
-            {"heading": "Cerita dari gambar", "body": "Buka buku bergambar, lalu ajak anak menebak apa yang terjadi di halaman berikutnya. Suara dibuat pelan agar suasana tenang."},
-            {"heading": "Cari benda bulat", "body": "Ajak anak mencari tiga benda bulat di ruang tamu dan menyentuhnya satu per satu. Sederhana tapi seru."},
+            {"heading": "Susun balok warna", "body": "Ajak si kecil menyusun balok atau tutup botol dari yang paling terang ke paling gelap. Seru, dan dia jadi lebih tenang."},
+            {"heading": "Tebak ceritanya", "body": "Buka buku bergambar, lalu tanya, \"Menurut adek, habis ini apa ya?\" Pelan-pelan aja, biar suasananya adem."},
+            {"heading": "Cari benda bulat", "body": "Yuk cari tiga benda bulat di ruang tamu bareng-bareng. Sambil jalan santai, sambil ngobrol."},
         ],
-        "cta_text": "Simpan untuk jadwal tidur siang besok",
-        "caption": "Waktu menjelang tidur siang sering jadi momen yang bikin ibu menarik napas panjang. Coba tiga kegiatan tenang ini, pilih yang paling cocok untuk si kecil. Mana yang mau kamu coba duluan?",
-        "hashtags": ["#aktivitasanak", "#tidursiang", "#montessoriindonesia", "#mainbareng"],
+        "cta_text": "Simpan dulu ya, Bunda, buat jadwal tidur siang besok",
+        "caption": "Jam menjelang tidur siang kadang bikin Bunda ingin tarik napas panjang, ya kan? Tenang, kita coba pelan-pelan aja. Tiga kegiatan kecil ini bisa bikin suasana jadi lebih adem, dan Bunda bisa ikut ngaso sebentar \U0001F49B Menurut Bunda, yang mana yang paling cocok buat si kecil? Cerita di komentar yuk!",
+        "hashtags": ["#aktivitasanak", "#tidursiang", "#mainbareng"],
     },
     {
-        "pillar": "Produk",
-        "topic": "Printable agar anak betah belajar di rumah",
-        "hook": "Anak cepat bosan belajar? Coba ubah caranya, bukan memaksa",
-        "subhook": "Lembar kerja singkat yang terasa seperti permainan",
+        "pillar": "Info Produk",
+        "topic": "Lembar kerja singkat biar anak betah belajar",
+        "hook": "Si kecil cepat bosan belajar? Nggak apa-apa, Bun!",
+        "subhook": "Coba ganti caranya, bukan dipaksa",
         "slides": [
-            {"heading": "Singkat itu kunci", "body": "Satu lembar, lima menit, selesai. Anak merasa berhasil, ibu tidak perlu mengomel."},
-            {"heading": "Visual yang ramai", "body": "Gambar dan warna membuat anak lebih mau duduk dan mencoba."},
-            {"heading": "Cetak sesuai kebutuhan", "body": "Cukup cetak lembar yang dibutuhkan hari itu, tanpa menumpuk buku di rumah."},
+            {"heading": "Singkat itu kunci", "body": "Satu lembar, lima menit, selesai. Si kecil merasa berhasil, Bunda juga nggak perlu ngomel."},
+            {"heading": "Warna-warni itu menarik", "body": "Gambar yang ceria bikin anak lebih mau duduk dan mencoba. Belajar jadi terasa seperti main."},
+            {"heading": "Cetak secukupnya", "body": "Cetak lembar yang dibutuhkan hari itu aja. Rumah nggak penuh tumpukan buku."},
         ],
-        "cta_text": "Cek link di bio untuk printable-nya",
-        "caption": "Belajar di rumah tidak harus panjang dan melelahkan. Lembar kerja singkat bisa jadi cara yang pas untuk memulai kebiasaan belajar yang menyenangkan. Link ada di bio ya.",
+        "cta_text": "Printable-nya ada di link bio ya, Bunda",
+        "caption": "Pernah nggak, Bun, baru lima menit belajar si kecil sudah kabur main? Itu wajar banget kok \U0001F338 Kadang yang perlu diganti bukan anaknya, tapi caranya. Lembar kerja singkat yang berwarna bisa bantu belajar terasa lebih ringan. Link printable ada di bio ya!",
         "hashtags": ["#printableanak", "#lembarkerjaanak", "#belajardirumah"],
     },
 ]
@@ -76,11 +76,29 @@ def build_prompt(brand: dict, history: list[str], pillars: list[str]) -> str:
     ctas = "\n".join(f"- {c}" for c in brand.get("cta_options", []))
     past = "\n".join(f"- {t}" for t in history[-25:]) or "(belum ada)"
     plan = "\n".join(f"{i + 1}. pilar: {p}" for i, p in enumerate(pillars))
+    reader = brand.get("reader_nickname", "Bunda")
+    kid = brand.get("kid_nickname", "si kecil")
 
-    return f"""Kamu adalah content strategist Instagram untuk brand "{brand['brand_name']}".
+    return f"""Kamu adalah penulis konten Instagram untuk brand "{brand['brand_name']}", yang menulis seperti sahabat sesama ibu.
 Niche: {brand['niche']}
 Audiens: {brand['audience']}
-Gaya bahasa: {brand['tone']}
+Karakter suara brand: {brand['tone']}
+
+PANDUAN GAYA BAHASA (sangat penting, ikuti di setiap slide dan caption):
+- Sapa pembaca dengan "{reader}" dan sebut anak dengan "{kid}" atau "adek". Pakai "kita" supaya terasa bersama.
+- Tulis bahasa Indonesia sehari-hari seperti chat ke teman: boleh "nih", "yuk", "ya", "deh", "lho", "banget", "nggak", "aja".
+- Jangan pakai "Anda", kata baku yang kaku, atau istilah akademik. Bayangkan kamu bicara di warung kopi, bukan menulis jurnal.
+- Kalimat pendek, 8-14 kata. Satu ide per kalimat.
+- Nada hangat, ceria, dan menyemangati. Akui perasaan ibu dulu ("Nggak apa-apa, Bun, itu wajar banget") sebelum memberi tips.
+- Hook memancing rasa penasaran dengan gaya ngobrol, misalnya "Bun, pernah nggak..." atau "Yuk coba 3 permainan seru ini".
+- Caption dibuka dengan sapaan atau momen yang relatable, memakai 2-4 emoji hangat yang pas (misalnya hati kuning, bunga, bintang, pelangi, beruang), dan ditutup pertanyaan ajakan komentar.
+- Hindari: nada menggurui, daftar kaku, kalimat panjang berbelit, dan membuat ibu merasa bersalah.
+
+Contoh perbandingan gaya:
+- KAKU (jangan): "Aktivitas sensorik dapat membantu meningkatkan konsentrasi anak."
+- HANGAT (tiru): "Main tepung dan air itu seru banget, Bun. Tangan si kecil sibuk, Bunda bisa napas sebentar."
+- KAKU (jangan): "Berikut adalah tiga tips efektif untuk mengatasi anak yang rewel."
+- HANGAT (tiru): "Si kecil lagi rewel? Tenang, Bun. Coba tiga hal kecil ini dulu yuk."
 
 Produk digital brand ini:
 {products}
@@ -101,14 +119,14 @@ Buat {len(pillars)} postingan carousel Instagram dengan urutan pilar berikut:
 {plan}
 
 Aturan tiap postingan:
-- "hook": judul slide pertama, maksimal 70 karakter, memancing orang berhenti scroll, jujur (bukan clickbait menyesatkan).
-- "subhook": satu kalimat pendukung, maksimal 70 karakter.
-- "slides": tepat 3 sampai 5 slide isi. Tiap slide punya "heading" (maksimal 35 karakter) dan "body" (maksimal 170 karakter, 1-3 kalimat pendek).
-- "cta_text": ajakan slide terakhir, maksimal 60 karakter.
-- "caption": 300-700 karakter, ditulis seperti teman, ada pertanyaan pemancing komentar di akhir. Boleh pakai 1-3 emoji. Jangan menaruh hashtag di caption.
+- "hook": judul slide pertama, maksimal 70 karakter, gaya ngobrol, memancing orang berhenti scroll, jujur (bukan clickbait menyesatkan).
+- "subhook": satu kalimat pendukung yang menenangkan atau menjanjikan hal mudah, maksimal 70 karakter.
+- "slides": tepat 3 sampai 5 slide isi. Tiap slide punya "heading" (maksimal 35 karakter, singkat dan ramah) dan "body" (maksimal 170 karakter, 1-3 kalimat pendek bergaya ngobrol).
+- "cta_text": ajakan slide terakhir, maksimal 60 karakter, ramah dan menyapa pembaca.
+- "caption": 300-700 karakter, ditulis seperti pesan ke teman, ada pertanyaan pemancing komentar di akhir. Jangan menaruh hashtag di caption.
 - "hashtags": 6-10 hashtag relevan huruf kecil, diawali #.
-- Postingan pilar "Produk" harus soft-sell: mulai dari masalah ibu, baru kaitkan ke produk di atas. Sebut nama produk hanya jika benar-benar relevan.
-- Jangan membuat klaim medis, statistik, atau nama penelitian. Jangan teks slide memakai emoji.
+- Postingan pilar "Info Produk" harus soft-sell: mulai dari masalah atau perasaan ibu, baru kaitkan ke produk di atas. Sebut nama produk hanya jika benar-benar relevan.
+- Jangan membuat klaim medis, statistik, atau nama penelitian. Teks di slide (hook, subhook, heading, body, cta_text) JANGAN memakai emoji; emoji hanya di caption.
 - Semua dalam bahasa Indonesia.
 
 Balas HANYA dengan JSON array valid, tanpa teks lain. Setiap elemen berbentuk:
@@ -120,26 +138,34 @@ Balas HANYA dengan JSON array valid, tanpa teks lain. Setiap elemen berbentuk:
 
 
 def call_gemini(prompt: str) -> list[dict]:
+    """Panggil Gemini. Kalau nama model sudah tidak tersedia (404), otomatis coba model cadangan."""
     key = env("GEMINI_API_KEY")
-    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    first = os.environ.get("GEMINI_MODEL") or "gemini-3.1-flash-lite"
+    candidates = [first] + [m for m in ("gemini-3-flash-preview", "gemini-flash-latest") if m != first]
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.9, "responseMimeType": "application/json"},
+        "generationConfig": {"temperature": 0.95, "responseMimeType": "application/json"},
     }
     last_err = None
-    for attempt in range(4):
-        try:
-            r = requests.post(url, headers={"x-goog-api-key": key}, json=body, timeout=180)
-            if r.status_code in (429, 500, 503):
-                raise RuntimeError(f"Gemini sibuk/limit ({r.status_code}): {r.text[:200]}")
-            r.raise_for_status()
-            text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return _parse_json_list(text)
-        except Exception as e:  # noqa: BLE001 - kita ulang untuk semua error sementara
-            last_err = e
-            time.sleep(8 * (attempt + 1))
-    raise RuntimeError(f"Gagal memanggil Gemini setelah beberapa percobaan: {last_err}")
+    for model in candidates:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        for attempt in range(3):
+            try:
+                r = requests.post(url, headers={"x-goog-api-key": key}, json=body, timeout=180)
+                if r.status_code == 404:
+                    last_err = f"model {model} tidak ditemukan (404)"
+                    print(f"[warn] {last_err}, mencoba model berikutnya")
+                    break  # langsung ke model cadangan, tidak perlu mengulang
+                if r.status_code in (429, 500, 503):
+                    raise RuntimeError(f"Gemini sibuk/limit ({r.status_code}): {r.text[:200]}")
+                r.raise_for_status()
+                text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+                print(f"[ok] model yang dipakai: {model}")
+                return _parse_json_list(text)
+            except Exception as e:  # noqa: BLE001 - ulang untuk error sementara
+                last_err = e
+                time.sleep(8 * (attempt + 1))
+    raise RuntimeError(f"Gagal memanggil Gemini: {last_err}")
 
 
 def _parse_json_list(text: str) -> list[dict]:

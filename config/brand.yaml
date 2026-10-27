@@ -3,15 +3,22 @@
 # Semua isi di bawah adalah contoh (placeholder). Ganti dengan brand kamu.
 # =====================================================================
 
-brand_name: "Nama Brand Kamu"          # tampil di slide
+brand_name: "Nama Brand Kamu"          # ganti dengan nama brand
 handle: "@namabrand"                   # username Instagram, tampil di slide
 timezone: "Asia/Jakarta"
 
-niche: "Parenting dan kegiatan anak untuk ibu"
-audience: "Ibu muda Indonesia dengan anak usia 2-8 tahun, sibuk, ingin anak belajar sambil bermain tanpa banyak biaya"
+niche: "Parenting dan kegiatan seru anak untuk para ibu"
+audience: "Ibu muda Indonesia dengan anak usia 2-8 tahun, sibuk, ingin anak belajar sambil bermain tanpa banyak biaya dan tanpa drama"
+
+# Cara AI menyapa pembaca dan menyebut anak. Ubah kalau mau gaya lain.
+reader_nickname: "Bunda"               # contoh lain: "Mama", "Moms", "Ibu"
+kid_nickname: "si kecil"               # contoh lain: "anak kita", "buah hati"
+
 tone: >
-  Hangat, ramah, seperti teman sesama ibu. Bahasa Indonesia santai tapi sopan.
-  Tidak menggurui, tidak menghakimi, tidak bikin ibu merasa bersalah.
+  Hangat, ceria, dan merangkul, seperti ngobrol dengan sahabat sesama ibu.
+  Bahasa Indonesia sehari-hari yang santai (boleh "nih", "yuk", "ya", "deh", "banget").
+  Selalu menyemangati dan menenangkan, tidak menggurui, tidak menghakimi,
+  tidak bikin ibu merasa bersalah. Sesekali jenaka ringan.
 
 # Produk digital yang dijual. Ganti dengan produk aslimu.
 products:
@@ -24,25 +31,25 @@ products:
 
 # Pilar konten dan porsinya. Total `weight` tidak harus 100, hanya perbandingan.
 content_pillars:
-  - name: "Edukasi"
+  - name: "Main Seru"
     weight: 3
-    idea: "Tips parenting praktis, aktivitas belajar di rumah, tahapan perkembangan anak (tanpa klaim medis)"
-  - name: "Relatable"
+    idea: "Ide kegiatan main dan belajar di rumah yang mudah, murah, dan bikin anak senang"
+  - name: "Curhat Bunda"
     weight: 2
     idea: "Momen sehari-hari ibu dan anak yang bikin senyum atau merasa 'aku nggak sendirian'"
-  - name: "Produk"
+  - name: "Info Produk"
     weight: 2
     idea: "Menunjukkan manfaat produk digital di atas lewat cerita atau masalah yang diselesaikan (soft-sell)"
-  - name: "Checklist & Tips Cepat"
+  - name: "Tips Cepat"
     weight: 2
-    idea: "Daftar singkat yang bisa disimpan ibu, misalnya ide kegiatan 10 menit atau rutinitas pagi"
+    idea: "Daftar singkat yang bisa disimpan ibu, misalnya ide kegiatan 10 menit atau rutinitas pagi yang lancar"
 
 # Kata ajakan di slide terakhir (diputar oleh AI). Ganti sesuai tujuanmu.
 cta_options:
-  - "Simpan postingan ini untuk nanti"
-  - "Kirim ke teman ibu yang butuh ini"
-  - "Cek link di bio untuk printable-nya"
-  - "Komen ide kegiatan favoritmu"
+  - "Simpan dulu ya, Bunda, biar nggak lupa"
+  - "Kirim ke teman Bunda yang lagi butuh ini"
+  - "Printable-nya ada di link bio ya"
+  - "Cerita dong, anak Bunda suka yang mana?"
 
 # Hindari hal-hal ini di semua konten.
 avoid:
@@ -62,10 +69,12 @@ hashtags_base:
 posts_per_week: 5
 post_times: ["07:30", "12:00", "19:30"]
 
-# Warna slide (hex). Ganti agar cocok dengan brand.
+# Warna slide (hex). Palet default sudah ceria; ganti kalau brand-mu punya warna sendiri.
 colors:
-  primary: "#F28C8C"     # latar slide pertama, aksen
-  secondary: "#7BB6A8"   # latar slide penutup, badge
-  cream: "#FFF4E8"       # latar slide isi
-  dark: "#3D2C2E"        # warna teks utama
+  primary: "#FF8FA3"     # merah muda hangat: latar sampul, aksen
+  secondary: "#FFD166"   # kuning matahari: stiker, slide penutup
+  accent: "#7ED6C1"      # mint: bukit/hiasan
+  sky: "#8ECAE6"         # biru langit: hiasan
+  cream: "#FFF7EA"       # krem: latar slide isi
+  dark: "#4B3A3F"        # cokelat tua: warna teks
   white: "#FFFFFF"
