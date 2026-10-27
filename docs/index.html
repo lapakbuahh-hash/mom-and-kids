@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Konten Instagram</title>
+<style>
+  :root {
+    --bg: #FFF8F0; --card: #FFFFFF; --text: #3D2C2E; --muted: #7d6b6d;
+    --primary: #F28C8C; --secondary: #7BB6A8; --line: #efe3d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #231a1b; --card: #2d2223; --text: #f6ebe6; --muted: #b9a7a4; --line: #433334; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 12px; }
+  .sub { color: var(--muted); font-size: .9rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .card .n { font-size: 1.8rem; font-weight: 700; }
+  .card .l { color: var(--muted); font-size: .85rem; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  th, td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; white-space: normal; min-width: 220px; }
+  th { color: var(--muted); font-weight: 600; cursor: pointer; }
+  a { color: var(--primary); }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 70px; gap: 10px; align-items: center; margin: 8px 0; font-size: .9rem; }
+  .bar { height: 14px; background: var(--primary); border-radius: 7px; min-width: 2px; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+  svg { width: 100%; height: 120px; display: block; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Dashboard Konten Instagram</h1>
+  <div class="sub" id="updated">Memuat data...</div>
+
+  <div class="cards" id="cards"></div>
+
+  <h2>Pertumbuhan pengikut</h2>
+  <div class="panel" id="followers"></div>
+
+  <h2>Rata-rata jangkauan per pilar konten</h2>
+  <div class="panel" id="pillars"></div>
+
+  <h2>Semua postingan</h2>
+  <div class="panel"><table id="table"></table></div>
+</main>
+
+<script>
+const fmt = n => (n == null ? "-" : Number(n).toLocaleString("id-ID"));
+const avg = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+fetch("analytics.json?" + Date.now()).then(r => r.json()).then(render).catch(() => {
+  document.getElementById("updated").textContent = "Belum ada data analitik.";
+});
+
+function render(d) {
+  document.getElementById("title").textContent = d.brand ? "Dashboard " + d.brand : "Dashboard Konten Instagram";
+  document.getElementById("updated").textContent = d.updated
+    ? "Diperbarui " + new Date(d.updated).toLocaleString("id-ID") : "Belum ada data. Analitik muncul setelah postingan pertama tayang.";
+
+  const posts = d.posts || [];
+  const reach = posts.map(p => p.metrics.reach).filter(v => v != null);
+  const inter = posts.map(p => p.metrics.total_interactions).filter(v => v != null);
+  const cards = [
+    ["Pengikut", d.account && d.account.followers_count],
+    ["Postingan tayang", posts.length],
+    ["Rata-rata jangkauan", reach.length ? Math.round(avg(reach)) : null],
+    ["Rata-rata interaksi", inter.length ? Math.round(avg(inter)) : null],
+  ];
+  document.getElementById("cards").innerHTML = cards.map(c =>
+    `<div class="card"><div class="n">${fmt(c[1])}</div><div class="l">${c[0]}</div></div>`).join("");
+
+  // Pengikut
+  const h = d.followers_history || [];
+  const fEl = document.getElementById("followers");
+  if (h.length < 2) { fEl.innerHTML = '<div class="empty">Grafik muncul setelah ada data dari minimal dua hari.</div>'; }
+  else {
+    const vals = h.map(x => x.followers), min = Math.min(...vals), max = Math.max(...vals), span = (max - min) || 1;
+    const pts = h.map((x, i) => `${(i / (h.length - 1)) * 600},${110 - ((x.followers - min) / span) * 100}`).join(" ");
+    fEl.innerHTML = `<svg viewBox="0 0 600 120" preserveAspectRatio="none"><polyline fill="none" stroke="#F28C8C" stroke-width="3" points="${pts}"/></svg>
+      <div class="sub">${h[0].date} (${fmt(h[0].followers)}) sampai ${h[h.length-1].date} (${fmt(h[h.length-1].followers)})</div>`;
+  }
+
+  // Pilar
+  const byPillar = {};
+  posts.forEach(p => { if (p.metrics.reach != null) (byPillar[p.pillar || "Lainnya"] ||= []).push(p.metrics.reach); });
+  const entries = Object.entries(byPillar).map(([k, v]) => [k, avg(v), v.length]).sort((a, b) => b[1] - a[1]);
+  const pEl = document.getElementById("pillars");
+  if (!entries.length) pEl.innerHTML = '<div class="empty">Belum ada data jangkauan.</div>';
+  else {
+    const top = entries[0][1] || 1;
+    pEl.innerHTML = entries.map(([k, v, n]) =>
+      `<div class="bar-row"><div>${esc(k)} <span class="sub">(${n})</span></div><div><div class="bar" style="width:${(v / top) * 100}%"></div></div><div>${fmt(Math.round(v))}</div></div>`).join("");
+  }
+
+  // Tabel
+  const cols = [["hook","Postingan"],["reach","Jangkauan"],["likes","Suka"],["comments","Komentar"],["saved","Simpan"],["shares","Bagikan"]];
+  const t = document.getElementById("table");
+  if (!posts.length) { t.innerHTML = '<tr><td class="empty">Belum ada postingan yang tayang.</td></tr>'; return; }
+  let sortKey = null, desc = true;
+  const draw = () => {
+    const rows = [...posts];
+    if (sortKey) rows.sort((a, b) => ((b.metrics[sortKey] ?? -1) - (a.metrics[sortKey] ?? -1)) * (desc ? 1 : -1));
+    t.innerHTML = "<tr>" + cols.map(c => `<th data-k="${c[0]}">${c[1]}</th>`).join("") + "</tr>" + rows.map(p =>
+      `<tr><td>${p.permalink ? `<a href="${esc(p.permalink)}" target="_blank" rel="noopener">${esc(p.hook)}</a>` : esc(p.hook)}<div class="sub">${esc(p.pillar)} · ${new Date(p.published_at).toLocaleDateString("id-ID")}</div></td>` +
+      cols.slice(1).map(c => `<td>${fmt(p.metrics[c[0]])}</td>`).join("") + "</tr>").join("");
+    t.querySelectorAll("th").forEach(th => th.onclick = () => {
+      if (th.dataset.k === "hook") return;
+      desc = sortKey === th.dataset.k ? !desc : true; sortKey = th.dataset.k; draw();
+    });
+  };
+  draw();
+}
+</script>
+</body>
+</html>

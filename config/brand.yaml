@@ -1,0 +1,71 @@
+# =====================================================================
+# BRAND KIT — EDIT FILE INI DULU SEBELUM MENJALANKAN APA PUN
+# Semua isi di bawah adalah contoh (placeholder). Ganti dengan brand kamu.
+# =====================================================================
+
+brand_name: "Nama Brand Kamu"          # tampil di slide
+handle: "@namabrand"                   # username Instagram, tampil di slide
+timezone: "Asia/Jakarta"
+
+niche: "Parenting dan kegiatan anak untuk ibu"
+audience: "Ibu muda Indonesia dengan anak usia 2-8 tahun, sibuk, ingin anak belajar sambil bermain tanpa banyak biaya"
+tone: >
+  Hangat, ramah, seperti teman sesama ibu. Bahasa Indonesia santai tapi sopan.
+  Tidak menggurui, tidak menghakimi, tidak bikin ibu merasa bersalah.
+
+# Produk digital yang dijual. Ganti dengan produk aslimu.
+products:
+  - name: "Printable Worksheet Calistung"
+    description: "Lembar kerja baca-tulis-hitung untuk anak TK-SD awal, siap cetak (PDF)"
+  - name: "Planner Harian Ibu"
+    description: "Template planner untuk mengatur jadwal rumah dan anak, siap cetak"
+  - name: "Flashcard Hewan dan Warna"
+    description: "Kartu belajar visual untuk balita, siap cetak"
+
+# Pilar konten dan porsinya. Total `weight` tidak harus 100, hanya perbandingan.
+content_pillars:
+  - name: "Edukasi"
+    weight: 3
+    idea: "Tips parenting praktis, aktivitas belajar di rumah, tahapan perkembangan anak (tanpa klaim medis)"
+  - name: "Relatable"
+    weight: 2
+    idea: "Momen sehari-hari ibu dan anak yang bikin senyum atau merasa 'aku nggak sendirian'"
+  - name: "Produk"
+    weight: 2
+    idea: "Menunjukkan manfaat produk digital di atas lewat cerita atau masalah yang diselesaikan (soft-sell)"
+  - name: "Checklist & Tips Cepat"
+    weight: 2
+    idea: "Daftar singkat yang bisa disimpan ibu, misalnya ide kegiatan 10 menit atau rutinitas pagi"
+
+# Kata ajakan di slide terakhir (diputar oleh AI). Ganti sesuai tujuanmu.
+cta_options:
+  - "Simpan postingan ini untuk nanti"
+  - "Kirim ke teman ibu yang butuh ini"
+  - "Cek link di bio untuk printable-nya"
+  - "Komen ide kegiatan favoritmu"
+
+# Hindari hal-hal ini di semua konten.
+avoid:
+  - "Klaim medis, diagnosis, atau janji hasil tertentu pada anak"
+  - "Membandingkan anak satu dengan lainnya atau membuat ibu merasa bersalah"
+  - "Memakai merek lain atau tokoh/karakter berhak cipta"
+  - "Informasi yang tidak yakin kebenarannya, jangan mengarang statistik atau nama penelitian"
+
+# Hashtag dasar yang selalu dipakai (AI menambah 6-10 hashtag sesuai topik).
+hashtags_base:
+  - "#parentingindonesia"
+  - "#ibumuda"
+  - "#belajarsambilbermain"
+  - "#printableanak"
+
+# Jadwal. Jam dalam zona waktu di atas. Posting disebar dalam 7 hari ke depan.
+posts_per_week: 5
+post_times: ["07:30", "12:00", "19:30"]
+
+# Warna slide (hex). Ganti agar cocok dengan brand.
+colors:
+  primary: "#F28C8C"     # latar slide pertama, aksen
+  secondary: "#7BB6A8"   # latar slide penutup, badge
+  cream: "#FFF4E8"       # latar slide isi
+  dark: "#3D2C2E"        # warna teks utama
+  white: "#FFFFFF"

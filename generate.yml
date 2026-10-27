@@ -1,0 +1,45 @@
+name: Buat konten mingguan
+
+on:
+  schedule:
+    - cron: "0 11 * * 0"   # tiap Minggu 11:00 UTC = 18:00 WIB
+  workflow_dispatch:        # bisa dijalankan manual dari tab Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autopilot
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+      - run: bash scripts/get_fonts.sh
+
+      - name: Generate konten dan kirim ke Telegram
+        run: python -m src.generate
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Simpan hasil ke repo
+        if: always()
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add -A data posts docs
+          git diff --cached --quiet || git commit -m "chore: konten mingguan baru"
+          git pull --rebase
+          git push
