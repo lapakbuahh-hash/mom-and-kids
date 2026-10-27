@@ -1,0 +1,1 @@
+Folder gambar hasil render
