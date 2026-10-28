@@ -650,7 +650,7 @@
     ],
     "full_caption": "Melihat si kecil asyik main gunting tempel tuh rasanya adem banget ya, Bun. Apalagi kalau mereka udah bisa fokus meskipun cuma sebentar. ✂️🎨\n\nKegiatan ini simpel banget tapi manfaatnya banyak buat melatih otot tangan si kecil. Nggak perlu alat mahal, pakai kertas bekas juga bisa kok.\n\nSi kecil di rumah lagi suka main apa nih kalau lagi bosan? Sharing ide seru yuk di kolom komentar! 🌈✨\n\n#momandkids #parentingindonesia #ibumuda #belajarsambilbermain #mainseru #idebermain #motorikhalus #kegiatananak #maindirumah #parentingceria #anakaktif",
     "id": "20261028-1043-04",
-    "status": "draft",
+    "status": "approved",
     "scheduled_at": "2026-10-28T00:30:00+07:00",
     "images": [
       "slide_01.png",
@@ -660,7 +660,8 @@
       "slide_05.png"
     ],
     "created_at": "2026-10-28T10:43:31.394864+07:00",
-    "attempts": 0
+    "attempts": 1,
+    "error": "{'message': '', 'type': 'IGApiException', 'code': 100, 'error_subcode': 33, 'fbtrace_id': 'AURHG-vz-jJpPsEw_ZakKMx'}"
   },
   {
     "pillar": "Main Seru",
