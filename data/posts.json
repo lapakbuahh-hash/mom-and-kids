@@ -660,8 +660,8 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-28T10:43:31.394864+07:00",
-    "attempts": 1,
-    "error": "{'message': '', 'type': 'IGApiException', 'code': 100, 'error_subcode': 33, 'fbtrace_id': 'AURHG-vz-jJpPsEw_ZakKMx'}"
+    "attempts": 2,
+    "error": "{'message': '', 'type': 'IGApiException', 'code': 100, 'error_subcode': 33, 'fbtrace_id': 'AfU173SuCks4JUnlca27ql3'}"
   },
   {
     "pillar": "Main Seru",
