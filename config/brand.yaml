@@ -80,7 +80,7 @@ hashtags_base:
 
 # Jadwal. Jam dalam zona waktu di atas. Posting disebar dalam 7 hari ke depan.
 posts_per_week: 5
-post_times: ["07:30", "12:00", "19:30"]
+post_times: ["09:00", "12:30", "20:30"]
 
 # Warna slide (hex). Palet default sudah ceria; ganti kalau brand-mu punya warna sendiri.
 colors:
