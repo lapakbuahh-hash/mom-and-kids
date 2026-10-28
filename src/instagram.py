@@ -1,13 +1,15 @@
 """Klien tipis untuk Instagram API with Instagram Login (graph.instagram.com)."""
 from __future__ import annotations
 
+import os
 import time
 
 import requests
 
 from .common import env
 
-BASE = "https://graph.instagram.com/v21.0"
+API_VERSION = os.environ.get("IG_API_VERSION") or "v26.0"   # bisa diganti lewat env bila Meta menaikkan versi
+BASE = f"https://graph.instagram.com/{API_VERSION}"
 
 
 class InstagramError(RuntimeError):
