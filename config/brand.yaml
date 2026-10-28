@@ -1,14 +1,14 @@
 # =====================================================================
-# BRAND KIT — EDIT FILE INI DULU SEBELUM MENJALANKAN APA PUN
-# Semua isi di bawah adalah contoh (placeholder). Ganti dengan brand kamu.
+# BRAND KIT — mom and kids
+# Handle sudah diisi sesuai akun Instagram. Ubah hanya kalau usernamenya berganti.
 # =====================================================================
 
-brand_name: "Nama Brand Kamu"          # ganti dengan nama brand
-handle: "@namabrand"                   # username Instagram, tampil di slide
+brand_name: "mom and kids"
+handle: "@momandkids226"               # username Instagram
 timezone: "Asia/Jakarta"
 
-niche: "Parenting dan kegiatan seru anak untuk para ibu"
-audience: "Ibu muda Indonesia dengan anak usia 2-8 tahun, sibuk, ingin anak belajar sambil bermain tanpa banyak biaya dan tanpa drama"
+niche: "Parenting praktis untuk ibu: belajar sambil bermain, MPASI dan menu keluarga, serta keuangan keluarga"
+audience: "Ibu muda Indonesia dengan bayi yang mulai MPASI sampai anak usia TK dan SD awal. Sibuk, ingin yang praktis, hemat, dan tenang tanpa drama."
 
 # Cara AI menyapa pembaca dan menyebut anak. Ubah kalau mau gaya lain.
 reader_nickname: "Bunda"               # contoh lain: "Mama", "Moms", "Ibu"
@@ -20,50 +20,62 @@ tone: >
   Selalu menyemangati dan menenangkan, tidak menggurui, tidak menghakimi,
   tidak bikin ibu merasa bersalah. Sesekali jenaka ringan.
 
-# Produk digital yang dijual. Ganti dengan produk aslimu.
+# Produk digital mom and kids.
 products:
-  - name: "Printable Worksheet Calistung"
-    description: "Lembar kerja baca-tulis-hitung untuk anak TK-SD awal, siap cetak (PDF)"
-  - name: "Planner Harian Ibu"
-    description: "Template planner untuk mengatur jadwal rumah dan anak, siap cetak"
-  - name: "Flashcard Hewan dan Warna"
-    description: "Kartu belajar visual untuk balita, siap cetak"
+  - name: "Printable Worksheets"
+    description: >
+      Lembar kerja siap cetak untuk anak: menelusuri garis (tracing lines), gunting-tempel
+      (cut and paste), permainan mencocokkan gambar, pengenalan angka, berhitung,
+      membaca alfabet, hingga unplugged coding (belajar logika coding tanpa gadget).
+  - name: "MPASI & Meal Planner"
+    description: >
+      Pemandu perencanaan gizi keluarga dan panduan Makanan Pendamping ASI (MPASI) 30 hari,
+      dilengkapi daftar belanja (grocery list) dan instruksi persiapan bahan makanan (food prep).
+  - name: "Notion/Excel Finance Tracker"
+    description: >
+      Template perencanaan finansial keluarga, pencatat pengeluaran harian (expense tracker),
+      dan jurnal pemantauan tumbuh kembang anak, tersedia di Notion atau spreadsheet.
 
 # Pilar konten dan porsinya. Total `weight` tidak harus 100, hanya perbandingan.
 content_pillars:
   - name: "Main Seru"
     weight: 3
-    idea: "Ide kegiatan main dan belajar di rumah yang mudah, murah, dan bikin anak senang"
-  - name: "Curhat Bunda"
+    idea: "Ide kegiatan belajar sambil bermain di rumah yang mudah dan murah: menelusuri garis, gunting-tempel, mencocokkan gambar, mengenal angka dan huruf, unplugged coding. Terkait produk Printable Worksheets."
+  - name: "Dapur Bunda"
     weight: 2
+    idea: "Ide menu MPASI dan makanan keluarga, trik food prep biar hemat waktu, cara menyusun daftar belanja mingguan. Terkait produk MPASI & Meal Planner."
+  - name: "Uang Keluarga"
+    weight: 2
+    idea: "Tips sederhana mengatur uang rumah tangga, mencatat pengeluaran harian tanpa ribet, dan mencatat momen tumbuh kembang anak. Terkait produk Finance Tracker."
+  - name: "Curhat Bunda"
+    weight: 1
     idea: "Momen sehari-hari ibu dan anak yang bikin senyum atau merasa 'aku nggak sendirian'"
   - name: "Info Produk"
     weight: 2
-    idea: "Menunjukkan manfaat produk digital di atas lewat cerita atau masalah yang diselesaikan (soft-sell)"
-  - name: "Tips Cepat"
-    weight: 2
-    idea: "Daftar singkat yang bisa disimpan ibu, misalnya ide kegiatan 10 menit atau rutinitas pagi yang lancar"
+    idea: "Menunjukkan manfaat salah satu produk lewat cerita atau masalah yang diselesaikan (soft-sell), bukan jualan keras"
 
 # Kata ajakan di slide terakhir (diputar oleh AI). Ganti sesuai tujuanmu.
 cta_options:
   - "Simpan dulu ya, Bunda, biar nggak lupa"
   - "Kirim ke teman Bunda yang lagi butuh ini"
-  - "Printable-nya ada di link bio ya"
-  - "Cerita dong, anak Bunda suka yang mana?"
+  - "Template-nya ada di link bio ya"
+  - "Cerita dong, mana yang paling cocok buat Bunda?"
 
 # Hindari hal-hal ini di semua konten.
 avoid:
   - "Klaim medis, diagnosis, atau janji hasil tertentu pada anak"
+  - "Saran gizi atau MPASI yang spesifik secara medis (alergi, usia mulai MPASI, takaran, anak dengan kondisi khusus). Bersifat ide umum saja dan arahkan ke dokter anak atau ahli gizi bila perlu"
+  - "Saran investasi, produk keuangan tertentu, atau janji penghasilan. Cukup tips mencatat dan mengatur uang"
   - "Membandingkan anak satu dengan lainnya atau membuat ibu merasa bersalah"
   - "Memakai merek lain atau tokoh/karakter berhak cipta"
   - "Informasi yang tidak yakin kebenarannya, jangan mengarang statistik atau nama penelitian"
 
 # Hashtag dasar yang selalu dipakai (AI menambah 6-10 hashtag sesuai topik).
 hashtags_base:
+  - "#momandkids"
   - "#parentingindonesia"
   - "#ibumuda"
   - "#belajarsambilbermain"
-  - "#printableanak"
 
 # Jadwal. Jam dalam zona waktu di atas. Posting disebar dalam 7 hari ke depan.
 posts_per_week: 5
