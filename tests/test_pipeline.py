@@ -52,6 +52,9 @@ class FakeResp:
 
 def fake_tg_call(method, **kw):
     sent.append((method, kw.get("json") or kw.get("data")))
+    if method == "answerCallbackQuery":
+        # Meniru Telegram: tombol sudah kedaluwarsa karena dibaca belasan menit kemudian.
+        raise RuntimeError("Bad Request: query is too old and response timeout expired")
     if method == "sendMessage":
         return {"message_id": len(sent)}
     return {}
@@ -200,6 +203,25 @@ gen.requests.post = fake_gem_post
 os.environ.pop("GEMINI_MODEL", None)
 assert gen.call_gemini("p") == [{"hook": "x"}]
 assert len(gem_calls) == 2 and "gemini-3-flash-preview" in gem_calls[1], gem_calls
+
+# ---- 11. tick: kalau Telegram bermasalah, publish tetap dijalankan; kegagalan tetap dilaporkan
+import src.tick as tick  # noqa: E402
+
+tick_calls = []
+
+
+def _telegram_down():
+    raise RuntimeError("telegram mati")
+
+
+tick.process_updates = _telegram_down
+tick.publish_due = lambda: (tick_calls.append(1), 0)[1]
+try:
+    tick.main()
+    raise AssertionError("tick seharusnya exit 1 saat ada error")
+except SystemExit as e:
+    assert e.code == 1
+assert tick_calls == [1], "publish_due harus tetap jalan walau Telegram error"
 
 shutil.rmtree(TMP)
 print("Semua uji lulus.")

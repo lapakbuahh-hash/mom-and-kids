@@ -24,6 +24,17 @@ def _call(method: str, **kwargs):
     return data["result"]
 
 
+def _soft(method: str, **kwargs):
+    """Panggilan Telegram yang sifatnya hanya kosmetik (balasan tombol, ubah pesan).
+    Gagal tidak boleh menghentikan proses. Contoh: answerCallbackQuery kedaluwarsa karena
+    kita hanya membaca tombol tiap ~20 menit."""
+    try:
+        return _call(method, **kwargs)
+    except Exception as e:  # noqa: BLE001
+        print(f"[warn] {method} gagal (diabaikan): {e}")
+        return None
+
+
 def notify(text: str) -> None:
     """Kirim pesan teks biasa ke pemilik. Gagal kirim tidak boleh menghentikan proses."""
     try:
@@ -88,7 +99,7 @@ def process_updates() -> int:
         action, _, post_id = cq["data"].partition(":")
         post = find_post(posts, post_id)
         if not post or post["status"] not in ("draft", "approved", "skipped"):
-            _call("answerCallbackQuery", json={"callback_query_id": cq["id"], "text": "Postingan tidak bisa diubah lagi."})
+            _soft("answerCallbackQuery", json={"callback_query_id": cq["id"], "text": "Postingan tidak bisa diubah lagi."})
             continue
 
         if action == "approve":
@@ -100,7 +111,7 @@ def process_updates() -> int:
         else:
             continue
         handled += 1
-        _call("answerCallbackQuery", json={"callback_query_id": cq["id"], "text": label})
+        _soft("answerCallbackQuery", json={"callback_query_id": cq["id"], "text": label})
         try:
             _call(
                 "editMessageReplyMarkup",
