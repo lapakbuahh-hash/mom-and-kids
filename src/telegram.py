@@ -49,7 +49,8 @@ def send_post_for_review(post: dict, brand: dict) -> None:
     files, media = {}, []
     for i, name in enumerate(post["images"][:10]):
         key = f"photo{i}"
-        files[key] = (name, open(folder / name, "rb"), "image/png")
+        mime = "image/jpeg" if name.lower().endswith((".jpg", ".jpeg")) else "image/png"
+        files[key] = (name, open(folder / name, "rb"), mime)
         media.append({"type": "photo", "media": f"attach://{key}"})
     _call("sendMediaGroup", data={"chat_id": chat_id, "media": json.dumps(media)}, files=files)
 

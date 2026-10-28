@@ -389,7 +389,8 @@ def render_post(post: dict, brand: dict, out_dir: pathlib.Path) -> list[str]:
 
     names = []
     for i, im in enumerate(images, start=1):
-        name = f"slide_{i:02d}.png"
-        im.save(out_dir / name, optimize=True)
+        # Instagram API hanya menerima JPEG. subsampling=0 menjaga teks tetap tajam.
+        name = f"slide_{i:02d}.jpg"
+        im.save(out_dir / name, "JPEG", quality=95, subsampling=0, optimize=True)
         names.append(name)
     return names

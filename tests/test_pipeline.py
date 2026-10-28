@@ -142,7 +142,7 @@ posts = common.load_posts()
 p = posts[0]
 assert p["status"] == "published" and p["media_id"] == "MEDIA1" and p["permalink"].endswith("abc")
 child_urls = [c[2]["image_url"] for c in ig_calls if c[0] == "POST" and "image_url" in c[2]]
-assert len(child_urls) == 5 and child_urls[0] == f"https://raw.githubusercontent.com/me/repo/main/posts/{pid_a}/slide_01.png"
+assert len(child_urls) == 5 and child_urls[0] == f"https://raw.githubusercontent.com/me/repo/main/posts/{pid_a}/slide_01.jpg"
 carousel = [c for c in ig_calls if c[0] == "POST" and c[2].get("media_type") == "CAROUSEL"]
 assert len(carousel) == 1 and carousel[0][2]["children"].count(",") == 4
 
@@ -222,6 +222,38 @@ try:
 except SystemExit as e:
     assert e.code == 1
 assert tick_calls == [1], "publish_due harus tetap jalan walau Telegram error"
+
+# ---- 12. slide baru berformat JPEG; draf lama (PNG) dikonversi otomatis sebelum tayang
+from PIL import Image as _Im  # noqa: E402
+
+fresh = common.load_posts()[0]
+assert all(n.endswith(".jpg") for n in fresh["images"]), fresh["images"]
+assert _Im.open(common.POSTS_DIR / fresh["id"] / fresh["images"][0]).format == "JPEG"
+
+legacy_id = "legacy-1"
+d = common.POSTS_DIR / legacy_id
+d.mkdir(parents=True)
+for i in (1, 2):
+    _Im.new("RGB", (1080, 1350), "#FF8FA3").save(d / f"slide_0{i}.png")
+probe = {"id": legacy_id, "images": ["slide_01.png", "slide_02.png"]}
+assert publish._ensure_jpeg(probe) is True
+assert probe["images"] == ["slide_01.jpg", "slide_02.jpg"]
+assert _Im.open(d / "slide_01.jpg").format == "JPEG"
+assert publish._ensure_jpeg(probe) is False  # sudah JPEG, tidak ada yang berubah
+
+# alur lengkap: draf lama approved + jatuh tempo -> konversi, push, lalu tayang dengan URL .jpg
+pushed, published_urls = [], []
+publish.push_changes = lambda msg: pushed.append(msg)
+publish.instagram.publish_carousel = lambda uid, urls, cap: (published_urls.append(urls), "M2")[1]
+posts = common.load_posts()
+posts.append({"id": legacy_id, "status": "approved", "scheduled_at": past, "images": ["slide_01.png", "slide_02.png"],
+              "full_caption": "x", "hook": "h", "attempts": 0})
+(d / "slide_01.jpg").unlink()  # kembali ke kondisi hanya PNG (seperti draf lama)
+(d / "slide_02.jpg").unlink()
+common.save_posts(posts)
+assert publish.publish_due() == 1
+assert len(pushed) == 1 and published_urls[0][0].endswith("/legacy-1/slide_01.jpg"), published_urls
+assert common.load_posts()[-1]["status"] == "published"
 
 shutil.rmtree(TMP)
 print("Semua uji lulus.")

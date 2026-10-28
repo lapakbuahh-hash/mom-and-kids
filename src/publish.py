@@ -2,15 +2,50 @@
 from __future__ import annotations
 
 import os
+import subprocess
 import time
 
-from . import instagram
+from PIL import Image
+
+from . import common, instagram
 from .common import env, load_brand, load_posts, now, parse_iso, save_posts
 from .telegram import notify
 
 MAX_PER_RUN = 2        # cegah banjir posting bila ada yang menumpuk
 MAX_ATTEMPTS = 3
 STALE_HOURS = 48       # jadwal yang terlewat lebih dari ini ditandai 'expired', bukan ditayangkan
+
+
+def _ensure_jpeg(post: dict) -> bool:
+    """Instagram hanya menerima JPEG. Ubah slide PNG (draf lama) menjadi JPEG.
+    Mengembalikan True kalau ada file JPEG baru yang dibuat."""
+    folder = common.POSTS_DIR / post["id"]
+    created = False
+    names = []
+    for name in post["images"]:
+        if name.lower().endswith(".png"):
+            src = folder / name
+            dst = folder / (src.stem + ".jpg")
+            if not dst.exists():
+                Image.open(src).convert("RGB").save(dst, "JPEG", quality=95, subsampling=0, optimize=True)
+                created = True
+            name = dst.name
+        names.append(name)
+    post["images"] = names
+    return created
+
+
+def push_changes(message: str) -> None:
+    """Commit dan push perubahan ke repo agar gambar baru bisa diambil Instagram lewat URL publik."""
+    def run(*cmd: str) -> None:
+        subprocess.run(cmd, check=True, cwd=common.ROOT)
+
+    run("git", "config", "user.name", "autopilot-bot")
+    run("git", "config", "user.email", "autopilot-bot@users.noreply.github.com")
+    run("git", "add", "-A", "posts", "data")
+    run("git", "commit", "-m", message)
+    run("git", "pull", "--rebase")
+    run("git", "push")
 
 
 def public_url(post_id: str, filename: str) -> str:
@@ -40,6 +75,10 @@ def publish_due() -> int:
             break
 
         try:
+            if _ensure_jpeg(post):
+                save_posts(posts)
+                push_changes(f"chore: konversi slide {post['id']} ke JPEG")
+                time.sleep(20)  # beri waktu agar file baru bisa diakses lewat URL publik
             urls = [public_url(post["id"], f) for f in post["images"]]
             media_id = instagram.publish_carousel(ig_user_id, urls, post["full_caption"])
             post["status"] = "published"
