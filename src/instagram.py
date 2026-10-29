@@ -20,24 +20,48 @@ def _token() -> str:
     return env("IG_ACCESS_TOKEN")  # type: ignore[return-value]
 
 
-def _check(r: requests.Response) -> dict:
+def _explain(err: dict) -> str:
+    code, sub = err.get("code"), err.get("error_subcode")
+    if code == 190:
+        return "Token tidak valid/kedaluwarsa. Buat token baru di dashboard Meta lalu perbarui secret IG_ACCESS_TOKEN."
+    if code == 100 and sub == 33:
+        return ("Akun/objek tidak ditemukan atau token tidak punya izin posting. Pastikan token dibuat dengan izin "
+                "instagram_business_content_publish dan akun berstatus Instagram tester yang sudah diterima.")
+    if code in (10, 200):
+        return "Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
+    return ""
+
+
+def _check(r: requests.Response, where: str) -> dict:
     try:
         data = r.json()
     except ValueError:
-        raise InstagramError(f"Respons bukan JSON ({r.status_code}): {r.text[:200]}")
+        raise InstagramError(f"{where}: respons bukan JSON ({r.status_code}): {r.text[:200]}")
     if r.status_code >= 400 or "error" in data:
-        raise InstagramError(str(data.get("error", data)))
+        err = data.get("error", data)
+        hint = _explain(err) if isinstance(err, dict) else ""
+        detail = err.get("error_user_msg") or err.get("message") if isinstance(err, dict) else ""
+        raise InstagramError(f"{where} -> kode {err.get('code') if isinstance(err, dict) else '?'}"
+                             f"/{err.get('error_subcode') if isinstance(err, dict) else '?'} {detail or ''} {hint}".strip())
     return data
 
 
 def post(path: str, **params) -> dict:
     params["access_token"] = _token()
-    return _check(requests.post(f"{BASE}/{path}", data=params, timeout=90))
+    return _check(requests.post(f"{BASE}/{path}", data=params, timeout=90), f"POST {path}")
 
 
 def get(path: str, **params) -> dict:
     params["access_token"] = _token()
-    return _check(requests.get(f"{BASE}/{path}", params=params, timeout=90))
+    return _check(requests.get(f"{BASE}/{path}", params=params, timeout=90), f"GET {path}")
+
+
+def account_id() -> str:
+    """ID akun profesional (user_id) langsung dari token, jadi tidak bergantung pada secret IG_USER_ID."""
+    uid = get("me", fields="user_id").get("user_id")
+    if not uid:
+        raise InstagramError("GET me: user_id tidak ditemukan. Cek izin token dan tipe akun (Business/Creator).")
+    return str(uid)
 
 
 def wait_until_ready(container_id: str, timeout: int = 180) -> None:

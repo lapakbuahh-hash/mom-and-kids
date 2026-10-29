@@ -85,6 +85,8 @@ def fake_ig_get(path, **params):
         return {"status_code": "FINISHED"}
     if params.get("fields") == "permalink":
         return {"permalink": "https://instagram.com/p/abc"}
+    if path == "me" and params.get("fields") == "user_id":
+        return {"user_id": "777"}
     if path == "me":
         return {"username": "u", "followers_count": 123, "media_count": 5}
     if path.endswith("/insights"):
@@ -145,6 +147,7 @@ child_urls = [c[2]["image_url"] for c in ig_calls if c[0] == "POST" and "image_u
 assert len(child_urls) == 5 and child_urls[0] == f"https://raw.githubusercontent.com/me/repo/main/posts/{pid_a}/slide_01.jpg"
 carousel = [c for c in ig_calls if c[0] == "POST" and c[2].get("media_type") == "CAROUSEL"]
 assert len(carousel) == 1 and carousel[0][2]["children"].count(",") == 4
+assert any(c[1] == "777/media" for c in ig_calls), "harus memakai user_id dari /me, bukan secret"
 
 # ---- 6. jadwal basi -> expired, bukan tayang
 posts[1]["status"] = "approved"

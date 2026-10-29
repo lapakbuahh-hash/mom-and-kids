@@ -58,7 +58,7 @@ def publish_due() -> int:
     brand = load_brand()
     posts = load_posts()
     current = now(brand)
-    ig_user_id = env("IG_USER_ID")
+    ig_user_id = None
     done = 0
 
     for post in posts:
@@ -79,6 +79,8 @@ def publish_due() -> int:
                 save_posts(posts)
                 push_changes(f"chore: konversi slide {post['id']} ke JPEG")
                 time.sleep(20)  # beri waktu agar file baru bisa diakses lewat URL publik
+            if ig_user_id is None:
+                ig_user_id = instagram.account_id()
             urls = [public_url(post["id"], f) for f in post["images"]]
             media_id = instagram.publish_carousel(ig_user_id, urls, post["full_caption"])
             post["status"] = "published"

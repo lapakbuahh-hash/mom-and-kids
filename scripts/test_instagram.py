@@ -31,3 +31,16 @@ print("pengikut      :", data.get("followers_count"))
 print("jumlah postingan:", data.get("media_count"))
 if data.get("account_type") not in ("BUSINESS", "MEDIA_CREATOR"):
     print("PERINGATAN: akun bukan Business/Creator, auto-post tidak akan jalan.")
+
+uid = data.get("user_id")
+r2 = requests.get(
+    f"https://graph.instagram.com/{version}/{uid}/content_publishing_limit",
+    params={"fields": "quota_usage,config", "access_token": token},
+    timeout=60,
+)
+d2 = r2.json()
+if r2.status_code >= 400 or "error" in d2:
+    print("IZIN POSTING: GAGAL ->", d2.get("error", d2))
+    print("Token kemungkinan belum punya izin instagram_business_content_publish. Buat ulang token dengan semua izin aktif.")
+    sys.exit(1)
+print("izin posting  : OK (token boleh memposting)")

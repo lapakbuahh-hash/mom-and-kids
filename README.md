@@ -1,4 +1,4 @@
-# Mom & Kids Autopilot
+# Pikupiku Autopilot
 
 Aplikasi pribadi yang menjalankan Instagram secara otomatis, terinspirasi dari Bleam AI. Biaya Rp 0.
 

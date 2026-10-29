@@ -1,10 +1,10 @@
 # =====================================================================
-# BRAND KIT — mom and kids
+# BRAND KIT — pikupiku
 # Handle sudah diisi sesuai akun Instagram. Ubah hanya kalau usernamenya berganti.
 # =====================================================================
 
-brand_name: "mom and kids"
-handle: "@momandkids226"               # username Instagram
+brand_name: "pikupiku"
+handle: "@kids.pikupiku"               # username Instagram
 timezone: "Asia/Jakarta"
 
 niche: "Parenting praktis untuk ibu: belajar sambil bermain, MPASI dan menu keluarga, serta keuangan keluarga"
@@ -20,7 +20,7 @@ tone: >
   Selalu menyemangati dan menenangkan, tidak menggurui, tidak menghakimi,
   tidak bikin ibu merasa bersalah. Sesekali jenaka ringan.
 
-# Produk digital mom and kids.
+# Produk digital pikupiku.
 products:
   - name: "Printable Worksheets"
     description: >
@@ -66,13 +66,13 @@ avoid:
   - "Klaim medis, diagnosis, atau janji hasil tertentu pada anak"
   - "Saran gizi atau MPASI yang spesifik secara medis (alergi, usia mulai MPASI, takaran, anak dengan kondisi khusus). Bersifat ide umum saja dan arahkan ke dokter anak atau ahli gizi bila perlu"
   - "Saran investasi, produk keuangan tertentu, atau janji penghasilan. Cukup tips mencatat dan mengatur uang"
-  - "Lama penyimpanan, suhu, atau takaran makanan yang spesifik (apalagi makanan bayi). Cukup bilang 'simpan di wadah tertutup di kulkas' lalu arahkan ke panduan keamanan pangan atau dokter anak/ahli gizi"
   - "Membandingkan anak satu dengan lainnya atau membuat ibu merasa bersalah"
   - "Memakai merek lain atau tokoh/karakter berhak cipta"
   - "Informasi yang tidak yakin kebenarannya, jangan mengarang statistik atau nama penelitian"
 
 # Hashtag dasar yang selalu dipakai (AI menambah 6-10 hashtag sesuai topik).
 hashtags_base:
+  - "#pikupiku"
   - "#momandkids"
   - "#parentingindonesia"
   - "#ibumuda"
@@ -80,7 +80,7 @@ hashtags_base:
 
 # Jadwal. Jam dalam zona waktu di atas. Posting disebar dalam 7 hari ke depan.
 posts_per_week: 5
-post_times: ["09:00", "12:30", "20:30"]
+post_times: ["09:00", "12:30", "20:30"]   # pagi setelah urusan anak, siang saat anak tidur, malam setelah anak tidur
 
 # Warna slide (hex). Palet default sudah ceria; ganti kalau brand-mu punya warna sendiri.
 colors:
