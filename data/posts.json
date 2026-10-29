@@ -765,7 +765,8 @@
     "attempts": 0,
     "media_id": "18100622630421454",
     "published_at": "2026-10-29T09:01:44.449193+07:00",
-    "permalink": "https://www.instagram.com/p/DfD429NGpc4/"
+    "permalink": "https://www.instagram.com/p/DfD429NGpc4/",
+    "metrics": {}
   },
   {
     "pillar": "Main Seru",
@@ -1022,7 +1023,15 @@
     "attempts": 0,
     "media_id": "18414641806091726",
     "published_at": "2026-10-29T09:07:55.940453+07:00",
-    "permalink": "https://www.instagram.com/p/DfD5hXrjfns/"
+    "permalink": "https://www.instagram.com/p/DfD5hXrjfns/",
+    "metrics": {
+      "reach": 4,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saved": 0,
+      "total_interactions": 1
+    }
   },
   {
     "pillar": "Main Seru",
@@ -1072,7 +1081,15 @@
     "attempts": 0,
     "media_id": "18124519204924201",
     "published_at": "2026-10-29T09:07:55.940453+07:00",
-    "permalink": "https://www.instagram.com/p/DfD5lqvjcbM/"
+    "permalink": "https://www.instagram.com/p/DfD5lqvjcbM/",
+    "metrics": {
+      "reach": 4,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saved": 0,
+      "total_interactions": 1
+    }
   },
   {
     "pillar": "Dapur Bunda",

@@ -1,7 +1,59 @@
 {
-  "updated": "2026-10-29T02:21:37.133151+07:00",
-  "brand": "mom and kids",
-  "account": {},
-  "followers_history": [],
-  "posts": []
+  "updated": "2026-10-30T02:26:01.724911+07:00",
+  "brand": "pikupiku",
+  "account": {
+    "username": "kids.pikupiku",
+    "followers_count": 1,
+    "media_count": 2,
+    "id": "29923203183936368"
+  },
+  "followers_history": [
+    {
+      "date": "2026-10-30",
+      "followers": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": "20261029-0903-01",
+      "pillar": "Main Seru",
+      "topic": "Ide permainan memilah warna untuk melatih fokus si kecil",
+      "hook": "Anak susah fokus main? Coba pakai cara ini",
+      "published_at": "2026-10-29T09:07:55.940453+07:00",
+      "permalink": "https://www.instagram.com/p/DfD5hXrjfns/",
+      "metrics": {
+        "reach": 4,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "id": "20261029-0903-02",
+      "pillar": "Main Seru",
+      "topic": "Manfaat bermain tebak bentuk untuk kemampuan observasi anak",
+      "hook": "Bermain tebak bentuk biar si kecil makin teliti",
+      "published_at": "2026-10-29T09:07:55.940453+07:00",
+      "permalink": "https://www.instagram.com/p/DfD5lqvjcbM/",
+      "metrics": {
+        "reach": 4,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "id": "20261028-1049-01",
+      "pillar": "Info Produk",
+      "topic": "Memudahkan manajemen rumah tangga dengan satu alat",
+      "hook": "Capek nggak sih ngurusin banyak hal sendirian?",
+      "published_at": "2026-10-29T09:01:44.449193+07:00",
+      "permalink": "https://www.instagram.com/p/DfD429NGpc4/",
+      "metrics": {}
+    }
+  ]
 }
