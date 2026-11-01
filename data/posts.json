@@ -1237,5 +1237,243 @@
     ],
     "created_at": "2026-10-29T09:03:54.237871+07:00",
     "attempts": 0
+  },
+  {
+    "pillar": "Dapur Bunda",
+    "topic": "Ide bahan makanan dapur yang praktis buat MPASI",
+    "hook": "Masak MPASI tiap hari bikin pusing ya Bun?",
+    "subhook": "Tenang, yuk intip stok bahan wajib di dapur kita.",
+    "slides": [
+      {
+        "heading": "Siapkan protein hewani beku",
+        "body": "Stok daging atau ikan yang sudah dipotong per porsi. Jadi saat mau masak, tinggal ambil sesuai kebutuhan saja deh."
+      },
+      {
+        "heading": "Sayuran dalam wadah kedap",
+        "body": "Cuci bersih dan potong sayur di awal minggu. Simpan di wadah rapat agar tetap segar dan siap cemplung ke panci."
+      },
+      {
+        "heading": "Kaldu alami adalah kunci",
+        "body": "Bikin kaldu tulang dalam jumlah banyak lalu bekukan di cetakan es. Tinggal pakai satu blok tiap kali masak bubur."
+      }
+    ],
+    "cta_text": "Simpan ya Bun, biar nggak bingung pas masak nanti.",
+    "caption": "Pernah nggak sih Bun, pas jam makan siang tiba-tiba stok bahan habis? Rasanya panik banget ya. 🌻 Tenang, itu wajar kok, bukan salah Bunda. Dulu aku juga sering gitu sampai akhirnya nyoba nyetok bahan praktis ini. Membantu banget buat ibu sibuk kayak kita. Sekarang masak jadi jauh lebih tenang dan nggak drama. 🌼 Bunda punya stok andalan apa nih di kulkas biar masak jadi gercep? Sharing yuk di kolom komentar!",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#mpasipraktis",
+      "#tipdapur",
+      "#mpasirumahan",
+      "#menukeluarga",
+      "#dapurbunda",
+      "#ibuhebat"
+    ],
+    "full_caption": "Pernah nggak sih Bun, pas jam makan siang tiba-tiba stok bahan habis? Rasanya panik banget ya. 🌻 Tenang, itu wajar kok, bukan salah Bunda. Dulu aku juga sering gitu sampai akhirnya nyoba nyetok bahan praktis ini. Membantu banget buat ibu sibuk kayak kita. Sekarang masak jadi jauh lebih tenang dan nggak drama. 🌼 Bunda punya stok andalan apa nih di kulkas biar masak jadi gercep? Sharing yuk di kolom komentar!\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #mpasipraktis #tipdapur #mpasirumahan #menukeluarga #dapurbunda #ibuhebat",
+    "id": "20261101-2358-01",
+    "status": "draft",
+    "scheduled_at": "2026-11-02T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-01T23:58:23.321279+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Permainan mencocokkan benda untuk anak balita",
+    "hook": "Anak lagi aktif-aktifnya? Ajak main ini yuk",
+    "subhook": "Cuma butuh barang di rumah, anak jadi anteng deh.",
+    "slides": [
+      {
+        "heading": "Siapkan benda sekitar",
+        "body": "Kumpulkan mainan atau alat dapur yang punya pasangan. Misalnya sendok, kaos kaki, atau tutup botol."
+      },
+      {
+        "heading": "Minta si kecil mencocokkan",
+        "body": "Tugasnya gampang, cukup cari pasangannya saja. Ini bagus banget buat melatih fokus dan kemampuan observasi si kecil lho."
+      },
+      {
+        "heading": "Beri apresiasi ya Bun",
+        "body": "Saat si kecil berhasil, beri pelukan atau pujian. Itu sudah bikin mereka senang banget dan makin semangat mainnya."
+      }
+    ],
+    "cta_text": "Coba deh Bun, pasti si kecil suka banget.",
+    "caption": "Kadang bingung ya mau nemenin anak main apa lagi selain nonton TV. 🌟 Padahal main yang melatih fokus nggak harus pakai alat mahal, Bun. Cukup pakai barang di sekitar kita aja si kecil sudah bisa belajar banyak. Anak senang, Bunda pun bisa lanjut beres-beres atau sekadar ngopi sebentar. 🌈 Si kecil paling suka main apa nih kalau lagi bosan di rumah?",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#mainseru",
+      "#idebermain",
+      "#maindirumah",
+      "#aktivitasanak",
+      "#parentingpraktis"
+    ],
+    "full_caption": "Kadang bingung ya mau nemenin anak main apa lagi selain nonton TV. 🌟 Padahal main yang melatih fokus nggak harus pakai alat mahal, Bun. Cukup pakai barang di sekitar kita aja si kecil sudah bisa belajar banyak. Anak senang, Bunda pun bisa lanjut beres-beres atau sekadar ngopi sebentar. 🌈 Si kecil paling suka main apa nih kalau lagi bosan di rumah?\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #mainseru #idebermain #maindirumah #aktivitasanak #parentingpraktis",
+    "id": "20261101-2358-02",
+    "status": "draft",
+    "scheduled_at": "2026-11-03T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-01T23:58:23.867865+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Mengenalkan konsep berhitung dengan barang rumah",
+    "hook": "Bunda mau ajak anak belajar berhitung?",
+    "subhook": "Nggak perlu buku, pakai benda dapur aja bisa.",
+    "slides": [
+      {
+        "heading": "Pakai benda yang ada",
+        "body": "Bisa pakai sendok, buah-buahan, atau mainan mobil-mobilan si kecil. Kumpulkan dalam jumlah kecil saja dulu."
+      },
+      {
+        "heading": "Hitung bersama sama",
+        "body": "Sentuh satu per satu benda sambil berhitung pelan. Cara ini bikin si kecil paham kalau angka punya wujud nyata."
+      },
+      {
+        "heading": "Main tebak angka",
+        "body": "Sembunyikan salah satu benda lalu tanya sisanya ada berapa. Seru banget buat simulasi berhitung sederhana."
+      }
+    ],
+    "cta_text": "Yuk dicoba nanti sore bareng si kecil.",
+    "caption": "Mengenalkan angka buat anak TK memang butuh kesabaran ekstra ya, Bun. 🧸 Nggak apa-apa kalau mereka belum paham langsung, yang penting suasana belajarnya dibuat santai saja. Kita main sambil ngobrol biar si kecil nggak ngerasa lagi dipaksa belajar. ✨ Bunda punya cara unik nggak buat ngajarin si kecil berhitung di rumah? Bagi ceritanya di sini ya!",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#belajarhitung",
+      "#idebermainanak",
+      "#maindirumah",
+      "#anakpintar",
+      "#aktivitaskreatif"
+    ],
+    "full_caption": "Mengenalkan angka buat anak TK memang butuh kesabaran ekstra ya, Bun. 🧸 Nggak apa-apa kalau mereka belum paham langsung, yang penting suasana belajarnya dibuat santai saja. Kita main sambil ngobrol biar si kecil nggak ngerasa lagi dipaksa belajar. ✨ Bunda punya cara unik nggak buat ngajarin si kecil berhitung di rumah? Bagi ceritanya di sini ya!\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #belajarhitung #idebermainanak #maindirumah #anakpintar #aktivitaskreatif",
+    "id": "20261101-2358-03",
+    "status": "draft",
+    "scheduled_at": "2026-11-04T20:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-01T23:58:24.409936+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Info Produk",
+    "topic": "Memudahkan manajemen rumah tangga dengan printable worksheet",
+    "hook": "Ibu sibuk mau anak belajar tapi bingung?",
+    "subhook": "Biar Bunda bisa tenang, coba cara praktis ini.",
+    "slides": [
+      {
+        "heading": "Waktu Bunda terbatas",
+        "body": "Mau nyiapin materi belajar tapi nggak sempat desain sendiri. Ujung-ujungnya anak cuma main gadget saja."
+      },
+      {
+        "heading": "Butuh yang siap pakai",
+        "body": "Printable worksheets kita dirancang buat bantu Bunda. Tinggal cetak, si kecil langsung bisa main dan belajar."
+      },
+      {
+        "heading": "Belajar jadi lebih asik",
+        "body": "Ada banyak pilihan mulai dari menebalkan garis sampai logika coding. Anak sibuk, Bunda pun bisa istirahat sejenak."
+      }
+    ],
+    "cta_text": "Klik link di bio buat koleksi lengkapnya ya Bun.",
+    "caption": "Jujur, kadang ngerasa bersalah kalau anak terlalu lama pegang gadget. 🍋 Tapi mau buat materi belajar sendiri kadang tenaga sudah habis buat urusan rumah. Makanya kami bikin printable ini supaya Bunda tinggal cetak saja tanpa ribet. ✨ Kita bantu si kecil belajar dengan cara yang menyenangkan tanpa bikin Bunda capek. 🌸 Siapa yang mau lihat koleksi lengkap worksheet-nya? Cek link di bio ya!",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#printableanak",
+      "#kegiatanpaud",
+      "#ibupintar",
+      "#idebermain",
+      "#worksheetsanak",
+      "#belajardirumah"
+    ],
+    "full_caption": "Jujur, kadang ngerasa bersalah kalau anak terlalu lama pegang gadget. 🍋 Tapi mau buat materi belajar sendiri kadang tenaga sudah habis buat urusan rumah. Makanya kami bikin printable ini supaya Bunda tinggal cetak saja tanpa ribet. ✨ Kita bantu si kecil belajar dengan cara yang menyenangkan tanpa bikin Bunda capek. 🌸 Siapa yang mau lihat koleksi lengkap worksheet-nya? Cek link di bio ya!\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #printableanak #kegiatanpaud #ibupintar #idebermain #worksheetsanak #belajardirumah",
+    "id": "20261101-2358-04",
+    "status": "draft",
+    "scheduled_at": "2026-11-06T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-01T23:58:24.955050+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Curhat Bunda",
+    "topic": "Menghargai momen tenang saat anak tidur siang",
+    "hook": "Momen paling berharga buat ibu itu apa?",
+    "subhook": "Pas si kecil tidur siang, dunia terasa tenang.",
+    "slides": [
+      {
+        "heading": "Suasana sunyi itu mewah",
+        "body": "Saat rumah mendadak sepi, kita akhirnya bisa napas lega. Duduk sebentar sambil minum teh hangat saja rasanya nikmat."
+      },
+      {
+        "heading": "Me time sejenak",
+        "body": "Bisa buka ponsel tanpa gangguan atau cuma melamun. Kita berhak istirahat, Bun. Jangan merasa bersalah ya."
+      },
+      {
+        "heading": "Energi baru buat nanti",
+        "body": "Istirahat sebentar bikin kita lebih sabar nanti. Bunda hebat sudah berjuang sampai titik ini hari ini."
+      }
+    ],
+    "cta_text": "Apa yang Bunda lakukan saat si kecil tidur?",
+    "caption": "Ada yang sama nggak? Pas anak tidur siang, rasanya langsung pengen rebahan total. ☕️ Jangan merasa buruk kalau Bunda butuh waktu tenang. Kita cuma manusia yang juga butuh istirahat supaya bisa terus sabar menghadapi drama si kecil. Ingat ya Bun, Bunda sudah melakukan yang terbaik hari ini. 🌼 Apa nih hal kecil yang bikin Bunda merasa tenang hari ini? Cerita di kolom komentar yuk!",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#curhatbunda",
+      "#momlife",
+      "#ibuhebat",
+      "#istirahatsejenak",
+      "#metimebunda",
+      "#semangatbunda"
+    ],
+    "full_caption": "Ada yang sama nggak? Pas anak tidur siang, rasanya langsung pengen rebahan total. ☕️ Jangan merasa buruk kalau Bunda butuh waktu tenang. Kita cuma manusia yang juga butuh istirahat supaya bisa terus sabar menghadapi drama si kecil. Ingat ya Bun, Bunda sudah melakukan yang terbaik hari ini. 🌼 Apa nih hal kecil yang bikin Bunda merasa tenang hari ini? Cerita di kolom komentar yuk!\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #curhatbunda #momlife #ibuhebat #istirahatsejenak #metimebunda #semangatbunda",
+    "id": "20261101-2358-05",
+    "status": "draft",
+    "scheduled_at": "2026-11-07T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-01T23:58:25.500438+07:00",
+    "attempts": 0
   }
 ]
