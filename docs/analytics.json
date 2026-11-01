@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-01T01:16:10.495116+07:00",
+  "updated": "2026-11-02T01:46:03.166856+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
     "followers_count": 1,
-    "media_count": 2,
+    "media_count": 3,
     "id": "29923203183936368"
   },
   "followers_history": [
@@ -19,9 +19,29 @@
     {
       "date": "2026-11-01",
       "followers": 1
+    },
+    {
+      "date": "2026-11-02",
+      "followers": 1
     }
   ],
   "posts": [
+    {
+      "id": "20261029-0903-03",
+      "pillar": "Dapur Bunda",
+      "topic": "Trik menjaga kesegaran sayuran agar awet lebih lama",
+      "hook": "Sayur cepat layu di kulkas? Coba trik ini",
+      "published_at": "2026-11-01T20:57:36.592776+07:00",
+      "permalink": "https://www.instagram.com/p/DfM5H8Vm1fy/",
+      "metrics": {
+        "reach": 1,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1
+      }
+    },
     {
       "id": "20261029-0903-01",
       "pillar": "Main Seru",
