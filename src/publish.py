@@ -54,6 +54,29 @@ def public_url(post_id: str, filename: str) -> str:
     return f"https://raw.githubusercontent.com/{repo}/{branch}/posts/{post_id}/{filename}"
 
 
+def video_url(post_id: str, filename: str) -> str:
+    """URL publik video Reels. Bisa diganti ke GitHub Pages lewat env REELS_BASE_URL
+    (contoh: https://user.github.io/repo/reels) kalau raw.githubusercontent.com ditolak Instagram."""
+    base = os.environ.get("REELS_BASE_URL")
+    if base:
+        return f"{base.rstrip('/')}/{post_id}/{filename}"
+    return public_url(post_id, filename)
+
+
+def cleanup_videos(posts: list[dict]) -> int:
+    """Hapus MP4 yang sudah tidak dibutuhkan (tayang, dilewati, kedaluwarsa, gagal) supaya repo tidak membengkak."""
+    removed = 0
+    for p in posts:
+        if p.get("format") != "reels" or p["status"] not in ("published", "skipped", "expired", "failed"):
+            continue
+        f = common.POSTS_DIR / p["id"] / p.get("video", "")
+        if p.get("video") and f.exists():
+            f.unlink()
+            p["video_removed"] = True
+            removed += 1
+    return removed
+
+
 def publish_due() -> int:
     brand = load_brand()
     posts = load_posts()
@@ -75,14 +98,20 @@ def publish_due() -> int:
             break
 
         try:
-            if _ensure_jpeg(post):
-                save_posts(posts)
-                push_changes(f"chore: konversi slide {post['id']} ke JPEG")
-                time.sleep(20)  # beri waktu agar file baru bisa diakses lewat URL publik
             if ig_user_id is None:
                 ig_user_id = instagram.account_id()
-            urls = [public_url(post["id"], f) for f in post["images"]]
-            media_id = instagram.publish_carousel(ig_user_id, urls, post["full_caption"])
+            if post.get("format") == "reels":
+                video = common.POSTS_DIR / post["id"] / post["video"]
+                if not video.exists():
+                    raise RuntimeError(f"File video {post['video']} tidak ditemukan di repo")
+                media_id = instagram.publish_reel(ig_user_id, video_url(post["id"], post["video"]), post["full_caption"])
+            else:
+                if _ensure_jpeg(post):
+                    save_posts(posts)
+                    push_changes(f"chore: konversi slide {post['id']} ke JPEG")
+                    time.sleep(20)  # beri waktu agar file baru bisa diakses lewat URL publik
+                urls = [public_url(post["id"], f) for f in post["images"]]
+                media_id = instagram.publish_carousel(ig_user_id, urls, post["full_caption"])
             post["status"] = "published"
             post["media_id"] = media_id
             post["published_at"] = current.isoformat()
@@ -102,5 +131,6 @@ def publish_due() -> int:
             else:
                 print(f"[warn] {post['id']} gagal (percobaan {post['attempts']}): {post['error']}")
 
+    cleanup_videos(posts)
     save_posts(posts)
     return done

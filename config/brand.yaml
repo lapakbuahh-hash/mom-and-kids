@@ -91,3 +91,11 @@ colors:
   cream: "#FFF7EA"       # krem: latar slide isi
   dark: "#4B3A3F"        # cokelat tua: warna teks
   white: "#FFFFFF"
+
+# Campuran jenis postingan per minggu (dari total posts_per_week). Sisanya carousel biasa.
+reels:
+  per_week: 2                                   # 0 = matikan Reels
+  styles: [slides_music, voiceover, kinetic]    # diputar bergantian
+  voice: "id-ID-GadisNeural"                    # suara narasi gratis (edge-tts); cadangan: id-ID-ArdiNeural
+jika_perbanyak:
+  per_week: 1                                   # carousel format "Jika anak ... / Perbanyak ..."

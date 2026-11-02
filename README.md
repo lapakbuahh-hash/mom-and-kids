@@ -136,3 +136,24 @@ Status postingan: `draft` > `approved` > `published`. Cabang lain: `skipped`, `e
 - **Model Gemini** bisa berganti. Default `gemini-2.5-flash`; ganti lewat environment `GEMINI_MODEL` di workflow bila model itu sudah tidak tersedia.
 - **Kualitas konten** tetap perlu kamu review. Jangan approve sembarangan, terutama untuk topik parenting. Aturan "hindari klaim medis" ada di brand kit, tapi AI bisa salah.
 - Hanya satu akun Instagram. Untuk beberapa brand, salin repo ini per brand.
+
+---
+
+## Reels dan format "Jika–Perbanyak"
+
+Tiap minggu, dari `posts_per_week` postingan, sebagian dibuat sebagai Reels dan sebagian sebagai carousel "Jika anak ... / Perbanyak ..." (atur di `config/brand.yaml`, bagian `reels` dan `jika_perbanyak`; isi `per_week: 0` untuk mematikan).
+
+**Gaya Reels** (diputar bergantian):
+
+| Gaya | Isi |
+|---|---|
+| `slides_music` | Kartu tips bergantian + musik latar |
+| `voiceover` | Sama + narasi suara gratis (edge-tts, suara `id-ID-GadisNeural`). Kalau TTS gagal, otomatis jadi `slides_music` |
+| `kinetic` | Kalimat besar muncul kata demi kata |
+
+- Video 1080x1920, MP4 H.264 + AAC, 20-30 detik, sekitar 2 MB. Musik dibuat sendiri lewat sintesis (bebas hak cipta).
+- Review lewat Telegram sama seperti carousel (video dikirim, lalu tombol Approve/Skip).
+- Setelah tayang (atau dilewati/kedaluwarsa/gagal), file MP4 dihapus dari repo agar ukuran repo tidak membengkak.
+- Instagram mengambil video lewat URL publik. Default: `raw.githubusercontent.com`. Kalau Reels gagal dengan error video tidak bisa diakses, aktifkan GitHub Pages lalu isi variabel `REELS_BASE_URL` di workflow `tick.yml` (lihat `src/publish.py: video_url`).
+- Coba lokal tanpa API: `python -m src.reels --style kinetic --out contoh.mp4 --no-voice`
+- Uji: `python tests/test_pipeline.py` dan `python tests/test_reels.py` (butuh ffmpeg).

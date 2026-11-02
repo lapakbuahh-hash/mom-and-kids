@@ -112,8 +112,11 @@ slots = gen.assign_slots(brand, 5, dt.date(2026, 11, 2))
 assert len({s.date() for s in slots}) == 5 and slots[-1].date() <= dt.date(2026, 11, 8)
 
 # ---- 2. generate (sample) + kirim ke Telegram
+_orig_brand = gen.load_brand
+gen.load_brand = lambda: {**_orig_brand(), "reels": {"per_week": 0}, "jika_perbanyak": {"per_week": 0}}  # uji carousel murni
 sys.argv = ["generate", "--sample"]
 gen.main()
+gen.load_brand = _orig_brand
 posts = common.load_posts()
 assert len(posts) == 2 and all(p["status"] == "draft" for p in posts)
 assert sum(1 for m, _ in sent if m == "sendMediaGroup") == 2

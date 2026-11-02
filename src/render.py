@@ -374,6 +374,62 @@ def _cta(post, brand, pal, idx, total, rng) -> Image.Image:
     return cv.finish()
 
 
+def _jika(slide, brand, pal, idx, total, number, rng) -> Image.Image:
+    """Format "JIKA ANAK ... / PERBANYAK ...": perilaku anak di kiri, kegiatan main di kanan, manfaat di bawah."""
+    bg = pal["cream"]
+    cv = Canvas(bg)
+    plum = _mix(pal["primary"], pal["dark"], 0.62)
+    red = _mix(pal["primary"], "#D62839", 0.8)
+    green = _mix(pal["accent"], "#1E9E4A", 0.75)
+    cloud(cv, W - 300, H - 330, 170, _tint(pal["sky"], 0.7))
+    cloud(cv, 30, H - 330, 170, _tint(pal["primary"], 0.65))
+    confetti(cv, rng, [pal["primary"], pal["secondary"], pal["accent"], pal["sky"]], 10, y_max=H - 250,
+             avoid=(40, 90, W - 40, 1150))
+
+    lx, rx = W * 0.27, W * 0.73
+    tf = _font("bold", 58)
+    for cx, label, col in ((lx, "JIKA ANAK", pal["dark"]), (rx, "PERBANYAK", plum)):
+        cv.text((cx - cv.width(label, tf) / 2, 95), label, tf, col)
+
+    pw, ph, top = 440, 440, 205
+    lbox = (lx - pw / 2, top, lx + pw / 2, top + ph)
+    rbox = (rx - pw / 2, top, rx + pw / 2, top + ph)
+    for box, fill in ((lbox, _tint(pal["secondary"], 0.55)), (rbox, _tint(pal["accent"], 0.6))):
+        cv.rr(box, 44, plum)
+        cv.rr((box[0] + 8, box[1] + 8, box[2] - 8, box[3] - 8), 38, fill)
+    # kiri: garis zig-zag "bolak-balik" + awan; kanan: bunga, hati, bintang
+    zz = [(lbox[0] + 70 + i * 60, lbox[1] + (150 if i % 2 == 0 else 290)) for i in range(6)]
+    cv.d.line([(x * S, y * S) for x, y in zz], fill=pal["dark"], width=14 * S, joint="curve")
+    cloud(cv, lbox[0] + 40, lbox[1] + 25, 150, _tint(pal["sky"], 0.5))
+    sparkle(cv, lbox[2] - 70, lbox[3] - 70, 34, pal["white"])
+    flower(cv, rbox[0] + pw / 2, rbox[1] + ph / 2 + 10, 105, [pal["primary"], pal["secondary"], pal["sky"]][number % 3], pal["white"])
+    heart(cv, rbox[0] + 80, rbox[1] + 90, 70, pal["primary"])
+    star(cv, rbox[2] - 80, rbox[3] - 80, 36, pal["secondary"], rot=0.3)
+
+    inner = pw
+    f, lines, lh = _fit(cv, clean(slide["heading"]).upper(), "bold", inner, 200, 52, 32, 1.15)
+    _draw_lines(cv, lines, f, lbox[0], top + ph + 38, lh, red, "center", pw)
+    f2, l2, lh2 = _fit(cv, clean(slide["body"]).upper(), "bold", inner, 200, 52, 32, 1.15)
+    _draw_lines(cv, l2, f2, rbox[0], top + ph + 38, lh2, plum, "center", pw)
+
+    benefit = clean(slide.get("benefit", ""))
+    if benefit:
+        by0, by1 = 1010, 1150
+        cv.rr((MARGIN + 30, by0 + 6, W - MARGIN + 6, by1 + 6), 30, _mix(bg, pal["dark"], 0.12))
+        cv.rr((MARGIN + 30, by0, W - MARGIN, by1), 30, _tint(pal["primary"], 0.5))
+        cv.circle(MARGIN + 30, by0 + 8, 36, green)
+        cv.d.line([((MARGIN + 14) * S, (by0 + 8) * S), ((MARGIN + 26) * S, (by0 + 20) * S), ((MARGIN + 48) * S, (by0 - 6) * S)],
+                  fill="#FFFFFF", width=8 * S, joint="curve")
+        f3, l3, lh3 = _fit(cv, benefit, "semibold", W - 2 * MARGIN - 110, 110, 36, 24, 1.3)
+        _draw_lines(cv, l3, f3, MARGIN + 60, by0 + (by1 - by0 - len(l3) * lh3) / 2, lh3, pal["dark"], "center", W - 2 * MARGIN - 110)
+
+    for k in range(3):  # penanda geser ">>>"
+        x = W - MARGIN - 110 + k * 34
+        cv.poly([(x, H - 135), (x + 22, H - 118), (x, H - 101)], plum)
+    _footer(cv, brand, pal, idx, total)
+    return cv.finish()
+
+
 def render_post(post: dict, brand: dict, out_dir: pathlib.Path) -> list[str]:
     """Render semua slide, kembalikan daftar nama file (relatif ke out_dir)."""
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -384,7 +440,8 @@ def render_post(post: dict, brand: dict, out_dir: pathlib.Path) -> list[str]:
 
     images = [_cover(post, brand, pal, total, random.Random(f"{seed}-0"))]
     for i, s in enumerate(content, start=1):
-        images.append(_content(s, brand, pal, i + 1, total, i, random.Random(f"{seed}-{i}")))
+        draw = _jika if post.get("layout") == "jika_perbanyak" else _content
+        images.append(draw(s, brand, pal, i + 1, total, i, random.Random(f"{seed}-{i}")))
     images.append(_cta(post, brand, pal, total, total, random.Random(f"{seed}-cta")))
 
     names = []
