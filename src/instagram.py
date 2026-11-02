@@ -64,7 +64,7 @@ def account_id() -> str:
     return str(uid)
 
 
-def wait_until_ready(container_id: str, timeout: int = 180) -> None:
+def wait_until_ready(container_id: str, timeout: int = 180, interval: int = 4) -> None:
     deadline = time.time() + timeout
     while time.time() < deadline:
         status = get(container_id, fields="status_code").get("status_code")
@@ -72,8 +72,21 @@ def wait_until_ready(container_id: str, timeout: int = 180) -> None:
             return
         if status in ("ERROR", "EXPIRED"):
             raise InstagramError(f"Container {container_id} berstatus {status}")
-        time.sleep(4)
+        time.sleep(interval)
     raise InstagramError(f"Container {container_id} belum siap setelah {timeout} detik")
+
+
+def publish_reel(ig_user_id: str, video_url: str, caption: str, share_to_feed: bool = True) -> str:
+    """Terbitkan Reels dari URL video publik (MP4 H.264/AAC, 9:16). Mengembalikan media id."""
+    c = post(
+        f"{ig_user_id}/media",
+        media_type="REELS",
+        video_url=video_url,
+        caption=caption,
+        share_to_feed="true" if share_to_feed else "false",
+    )
+    wait_until_ready(c["id"], timeout=600, interval=10)  # pemrosesan video lebih lama daripada gambar
+    return post(f"{ig_user_id}/media_publish", creation_id=c["id"])["id"]
 
 
 def publish_carousel(ig_user_id: str, image_urls: list[str], caption: str) -> str:

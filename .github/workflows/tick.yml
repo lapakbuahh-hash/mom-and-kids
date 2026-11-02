@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "autopilot-bot"
           git config user.email "autopilot-bot@users.noreply.github.com"
-          git add -A data
+          git add -A data posts
           git diff --cached --quiet || git commit -m "chore: perbarui status postingan"
           git pull --rebase
           git push

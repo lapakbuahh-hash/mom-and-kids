@@ -46,17 +46,27 @@ def notify(text: str) -> None:
 def send_post_for_review(post: dict, brand: dict) -> None:
     chat_id = env("TELEGRAM_CHAT_ID")
     folder = POSTS_DIR / post["id"]
-    files, media = {}, []
-    for i, name in enumerate(post["images"][:10]):
-        key = f"photo{i}"
-        mime = "image/jpeg" if name.lower().endswith((".jpg", ".jpeg")) else "image/png"
-        files[key] = (name, open(folder / name, "rb"), mime)
-        media.append({"type": "photo", "media": f"attach://{key}"})
-    _call("sendMediaGroup", data={"chat_id": chat_id, "media": json.dumps(media)}, files=files)
+    is_reel = post.get("format") == "reels"
+    if is_reel:
+        with open(folder / post["video"], "rb") as fh:
+            _call(
+                "sendVideo",
+                data={"chat_id": chat_id, "supports_streaming": "true", "width": 1080, "height": 1920},
+                files={"video": (post["video"], fh, "video/mp4")},
+            )
+    else:
+        files, media = {}, []
+        for i, name in enumerate(post["images"][:10]):
+            key = f"photo{i}"
+            mime = "image/jpeg" if name.lower().endswith((".jpg", ".jpeg")) else "image/png"
+            files[key] = (name, open(folder / name, "rb"), mime)
+            media.append({"type": "photo", "media": f"attach://{key}"})
+        _call("sendMediaGroup", data={"chat_id": chat_id, "media": json.dumps(media)}, files=files)
 
     when = parse_iso(post["scheduled_at"]).strftime("%a %d %b %Y, %H:%M")
+    kind = f"REELS ({post.get('style', '')})" if is_reel else "Carousel"
     text = (
-        f"Draf {post['id']}\n"
+        f"Draf {post['id']} | {kind}\n"
         f"Pilar: {post['pillar']}\n"
         f"Jadwal tayang: {when}\n\n"
         f"{post['full_caption']}"
