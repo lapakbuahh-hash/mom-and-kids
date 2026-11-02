@@ -1483,5 +1483,242 @@
     ],
     "created_at": "2026-11-01T23:58:25.500438+07:00",
     "attempts": 0
+  },
+  {
+    "pillar": "Uang Keluarga",
+    "topic": "Cara sederhana memisahkan anggaran untuk kebutuhan anak dan rumah",
+    "hook": "Pusing lihat uang belanja campur aduk?",
+    "subhook": "Tenang Bun, kita atur pelan-pelan supaya nggak bocor lagi.",
+    "slides": [
+      {
+        "heading": "Cek pengeluaran",
+        "body": "Coba tulis semua pengeluaran minggu ini di kertas. Jangan kaget dulu ya, ini langkah awal biar tahu ke mana uang pergi."
+      },
+      {
+        "heading": "Pisahkan posnya",
+        "body": "Bagi uang jadi dua amplop. Satu untuk dapur dan kebutuhan rutin, satu lagi untuk keperluan si kecil yang mendadak."
+      },
+      {
+        "heading": "Evaluasi santai",
+        "body": "Nggak perlu muluk-muluk. Cukup catat yang penting saja agar kita lebih tenang mengelola uang keluarga."
+      }
+    ],
+    "cta_text": "Simpan postingan ini biar gampang dicari nanti ya.",
+    "caption": "Sering nggak sih Bun, rasanya baru kemarin pegang uang belanja, eh tahu-tahu sudah habis? 💸 Nggak apa-apa, Bun, itu wajar banget kok. Kita semua pernah di fase ini. Yuk, coba pelan-pelan kita tata biar keuangan rumah tangga lebih tenang dan nggak was-was lagi. Bunda biasanya pakai metode apa nih kalau mengatur uang belanja bulanan? Cerita di bawah ya, Bun! 💛",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#keuangankeluarga",
+      "#ibuhebat",
+      "#manajemenrumahtangga",
+      "#ibucerdas",
+      "#tipskeuangan"
+    ],
+    "full_caption": "Sering nggak sih Bun, rasanya baru kemarin pegang uang belanja, eh tahu-tahu sudah habis? 💸 Nggak apa-apa, Bun, itu wajar banget kok. Kita semua pernah di fase ini. Yuk, coba pelan-pelan kita tata biar keuangan rumah tangga lebih tenang dan nggak was-was lagi. Bunda biasanya pakai metode apa nih kalau mengatur uang belanja bulanan? Cerita di bawah ya, Bun! 💛\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #keuangankeluarga #ibuhebat #manajemenrumahtangga #ibucerdas #tipskeuangan",
+    "id": "20261102-1307-01",
+    "status": "draft",
+    "scheduled_at": "2026-11-03T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-02T13:07:47.940556+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Info Produk",
+    "topic": "Solusi praktis mengatur rutinitas harian ibu dengan template digital",
+    "hook": "Lagi capek banget sama jadwal rumah yang berantakan?",
+    "subhook": "Ibu juga manusia, wajar kalau pengen semuanya lebih tertata.",
+    "slides": [
+      {
+        "heading": "Ibu perlu istirahat",
+        "body": "Jangan dipaksain semua dikerjakan sendiri. Kalau Bunda tenang, rumah pasti jadi lebih nyaman buat si kecil."
+      },
+      {
+        "heading": "Solusi praktis",
+        "body": "Kami punya template digital untuk bantu Bunda catat jadwal dan tumbuh kembang anak tanpa harus pusing ingat semuanya."
+      },
+      {
+        "heading": "Lebih luang",
+        "body": "Setelah semua terencana di template, Bunda jadi punya waktu buat ngopi atau sekadar rebahan santai."
+      }
+    ],
+    "cta_text": "Cek link di bio ya kalau mau coba templatenya.",
+    "caption": "Kadang rasanya satu hari itu kurang banget ya buat beres-beres, urus anak, dan masak. 🧸 Sampai sering lupa jadwal penting si kecil atau malah lupa kasih makan sendiri. Tenang, Bun, kita nggak sendirian kok. Bantuan kecil kayak template terstruktur bisa bikin beban pikiran jauh lebih ringan. Ada yang lagi kewalahan juga kah minggu ini? Sini peluk jauh dari jauh! ✨",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#produkindonesia",
+      "#ibuproduktif",
+      "#tipsibu",
+      "#parentingpraktis",
+      "#manajemenwaktu"
+    ],
+    "full_caption": "Kadang rasanya satu hari itu kurang banget ya buat beres-beres, urus anak, dan masak. 🧸 Sampai sering lupa jadwal penting si kecil atau malah lupa kasih makan sendiri. Tenang, Bun, kita nggak sendirian kok. Bantuan kecil kayak template terstruktur bisa bikin beban pikiran jauh lebih ringan. Ada yang lagi kewalahan juga kah minggu ini? Sini peluk jauh dari jauh! ✨\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #produkindonesia #ibuproduktif #tipsibu #parentingpraktis #manajemenwaktu",
+    "id": "20261102-1307-02",
+    "status": "draft",
+    "scheduled_at": "2026-11-04T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-02T13:07:48.488573+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Ide bermain mengenal konsep alfabet dengan barang rumah",
+    "hook": "Bosen main itu-itu aja sama si kecil?",
+    "subhook": "Yuk kenalkan huruf dengan cara yang seru dan nggak ribet.",
+    "slides": [
+      {
+        "heading": "Cari benda sekitar",
+        "body": "Ajak si kecil mencari barang yang namanya berawalan huruf tertentu di rumah. Seru kayak main detektif!"
+      },
+      {
+        "heading": "Main tebak huruf",
+        "body": "Bunda bisa gambar huruf di kertas, lalu minta si kecil menaruh benda di atasnya. Sederhana tapi bikin anak fokus."
+      },
+      {
+        "heading": "Rayakan progresnya",
+        "body": "Apapun hasilnya, kasih apresiasi ya. Yang penting si kecil senang dan kita juga tidak drama."
+      }
+    ],
+    "cta_text": "Kirim ke teman Bunda yang anaknya lagi suka belajar huruf.",
+    "caption": "Belajar huruf nggak harus pakai buku yang bikin anak bosan, Bun. 🌟 Pakai benda di sekitar rumah malah bisa jadi mainan seru yang bikin si kecil betah eksplorasi. Bunda yang paling sabar deh kalau lihat si kecil mulai antusias belajar hal baru. Si kecil di rumah lagi suka main apa nih akhir-akhir ini? Share ide seru Bunda yuk! 🌸",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#maindirumah",
+      "#idebermain",
+      "#motorikhalus",
+      "#parentinganak",
+      "#kegiatanbalita"
+    ],
+    "full_caption": "Belajar huruf nggak harus pakai buku yang bikin anak bosan, Bun. 🌟 Pakai benda di sekitar rumah malah bisa jadi mainan seru yang bikin si kecil betah eksplorasi. Bunda yang paling sabar deh kalau lihat si kecil mulai antusias belajar hal baru. Si kecil di rumah lagi suka main apa nih akhir-akhir ini? Share ide seru Bunda yuk! 🌸\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #maindirumah #idebermain #motorikhalus #parentinganak #kegiatanbalita",
+    "id": "20261102-1307-03",
+    "status": "draft",
+    "scheduled_at": "2026-11-05T20:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-02T13:07:49.034706+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Ide permainan mencocokkan jumlah benda untuk si kecil",
+    "hook": "Mau ajak anak belajar angka tanpa drama?",
+    "subhook": "Pakai benda nyata saja, Bunda, pasti si kecil lebih semangat.",
+    "slides": [
+      {
+        "heading": "Gunakan benda nyata",
+        "body": "Siapkan sendok, kaos kaki, atau mainan si kecil. Jangan pakai angka dulu, fokus ke jumlahnya saja."
+      },
+      {
+        "heading": "Ajak mencocokkan",
+        "body": "Minta si kecil menaruh dua benda di depan kartu angka dua. Sambil main, sambil pelan-pelan kenal konsep."
+      },
+      {
+        "heading": "Santai saja",
+        "body": "Kalau anak belum mau, ya sudah. Jangan dipaksa, yang penting suasana mainnya tetap ceria dan menyenangkan."
+      }
+    ],
+    "cta_text": "Simpan ya Bun, buat ide main akhir pekan nanti.",
+    "caption": "Ngenalin angka memang butuh kesabaran ekstra ya, Bun. 🌈 Tapi kalau pakai cara yang rileks dan pakai benda yang ada di depan mata, biasanya anak lebih mudah paham. Ingat ya Bun, tujuan kita cuma biar anak kenal dan senang, bukan buat jago dalam semalam. Ada yang lagi berjuang ngajarin berhitung juga? Semangat ya, Bunda hebat! 🌻",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#belajarangka",
+      "#mainbarenganak",
+      "#kegiatananak",
+      "#idebermainanak",
+      "#parentingceria",
+      "#belajardirumah"
+    ],
+    "full_caption": "Ngenalin angka memang butuh kesabaran ekstra ya, Bun. 🌈 Tapi kalau pakai cara yang rileks dan pakai benda yang ada di depan mata, biasanya anak lebih mudah paham. Ingat ya Bun, tujuan kita cuma biar anak kenal dan senang, bukan buat jago dalam semalam. Ada yang lagi berjuang ngajarin berhitung juga? Semangat ya, Bunda hebat! 🌻\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #belajarangka #mainbarenganak #kegiatananak #idebermainanak #parentingceria #belajardirumah",
+    "id": "20261102-1307-04",
+    "status": "draft",
+    "scheduled_at": "2026-11-07T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-02T13:07:49.581711+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Dapur Bunda",
+    "topic": "Tips menyimpan bahan makanan agar awet dan siap masak",
+    "hook": "Sayur di kulkas sering busuk sebelum dimasak?",
+    "subhook": "Nyesek banget ya kalau harus buang bahan makanan.",
+    "slides": [
+      {
+        "heading": "Langsung bersihkan",
+        "body": "Begitu belanja, jangan langsung masuk kulkas. Bersihkan dulu sayurnya, lalu lap sampai kering supaya tidak cepat busuk."
+      },
+      {
+        "heading": "Wadah yang pas",
+        "body": "Gunakan wadah kedap udara atau bungkus pakai tisu dapur agar kelembapan terjaga. Ini kunci sayur segar lebih lama."
+      },
+      {
+        "heading": "Catat isinya",
+        "body": "Tempel label kecil di wadah biar Bunda tahu mana yang harus dimasak duluan. Jadi nggak ada yang terlupakan."
+      }
+    ],
+    "cta_text": "Yuk share tips ini ke Bunda lainnya.",
+    "caption": "Siapa yang sering lupa ada sayur di pojokan kulkas terus ujung-ujungnya dibuang karena sudah layu? 🥦 Sayang banget ya, Bun. Padahal kalau sedikit lebih telaten di awal pas habis belanja, masak jadi jauh lebih tenang sepanjang minggu. Bunda punya tips biar bahan masakan awet nggak? Spill di kolom komentar dong biar kita bisa saling belajar! ✨",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#tipsdapur",
+      "#tipsibumuda",
+      "#mpasirumahan",
+      "#menukeluarga",
+      "#masakpraktis",
+      "#ibuhemat"
+    ],
+    "full_caption": "Siapa yang sering lupa ada sayur di pojokan kulkas terus ujung-ujungnya dibuang karena sudah layu? 🥦 Sayang banget ya, Bun. Padahal kalau sedikit lebih telaten di awal pas habis belanja, masak jadi jauh lebih tenang sepanjang minggu. Bunda punya tips biar bahan masakan awet nggak? Spill di kolom komentar dong biar kita bisa saling belajar! ✨\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #tipsdapur #tipsibumuda #mpasirumahan #menukeluarga #masakpraktis #ibuhemat",
+    "id": "20261102-1307-05",
+    "status": "draft",
+    "scheduled_at": "2026-11-08T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-02T13:07:50.126871+07:00",
+    "attempts": 0
   }
 ]
