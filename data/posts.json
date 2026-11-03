@@ -710,7 +710,7 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-28T10:43:32.538815+07:00",
-    "attempts": 1,
+    "attempts": 2,
     "error": "GET me -> kode 200/None API access blocked. Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
   },
   {
@@ -1197,7 +1197,7 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-29T09:03:53.736866+07:00",
-    "attempts": 1,
+    "attempts": 2,
     "error": "GET me -> kode 200/None API access blocked. Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
   },
   {
