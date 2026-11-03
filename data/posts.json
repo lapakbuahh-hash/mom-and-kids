@@ -703,11 +703,11 @@
     "status": "approved",
     "scheduled_at": "2026-11-03T12:00:00+07:00",
     "images": [
-      "slide_01.png",
-      "slide_02.png",
-      "slide_03.png",
-      "slide_04.png",
-      "slide_05.png"
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
     ],
     "created_at": "2026-10-28T10:43:32.538815+07:00",
     "attempts": 0
