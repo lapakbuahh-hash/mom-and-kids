@@ -700,7 +700,7 @@
     ],
     "full_caption": "Dunia coding terdengar rumit ya buat anak-anak? Padahal kita bisa kenalin lewat permainan fisik lho, Bun. 🚀🧠\n\nNggak perlu layar, cukup pakai kertas dan sedikit kreativitas. Si kecil jadi belajar urutan dan logika tanpa drama mata lelah kena gadget.\n\nBunda lebih suka main yang fisik seperti ini atau yang digital nih? Cerita di bawah ya, kita ngobrol santai! 🎈🌻\n\n#momandkids #parentingindonesia #ibumuda #belajarsambilbermain #unpluggedcoding #belajarcoding #maindirumah #idebermain #parentingpraktis #anakcerdas #logikaanak #mainseru",
     "id": "20261028-1043-05",
-    "status": "approved",
+    "status": "failed",
     "scheduled_at": "2026-11-03T12:00:00+07:00",
     "images": [
       "slide_01.jpg",
@@ -710,7 +710,7 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-28T10:43:32.538815+07:00",
-    "attempts": 2,
+    "attempts": 3,
     "error": "GET me -> kode 200/None API access blocked. Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
   },
   {
@@ -1187,7 +1187,7 @@
     ],
     "full_caption": "Sering nggak sih, Bun, kita nungguin si kecil tidur cuma buat bisa duduk tenang sebentar aja? Rasanya itu kayak hadiah paling mewah setelah seharian penuh drama. Kadang kita merasa bersalah kalau ingin istirahat, padahal Bunda sangat berhak untuk itu. Bunda nggak sendiri kok, kita semua sedang berjuang dengan cara masing-masing. Ingat ya, Bunda bahagia, si kecil pun ikut ceria. Malam ini Bunda rencananya mau ngapain nih biar santai? ☕✨🌙\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #curhatbunda #metimeibu #pejuangkeluarga #ibuhebat #selfcareibu #ceritabunda",
     "id": "20261029-0903-04",
-    "status": "approved",
+    "status": "failed",
     "scheduled_at": "2026-11-03T09:00:00+07:00",
     "images": [
       "slide_01.jpg",
@@ -1197,7 +1197,7 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-29T09:03:53.736866+07:00",
-    "attempts": 2,
+    "attempts": 3,
     "error": "GET me -> kode 200/None API access blocked. Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
   },
   {
