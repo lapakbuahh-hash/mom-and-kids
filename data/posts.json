@@ -1236,7 +1236,7 @@
     ],
     "full_caption": "Dulu saya pikir pengeluaran besar aja yang perlu dicatat, ternyata pengeluaran kecil kayak biaya parkir atau jajan cemilan itu yang bikin kaget di akhir bulan. Memang butuh niat sih buat konsisten mencatat, tapi tenang, Bunda bisa mulai pelan-pelan pakai template yang praktis. Nggak usah dibuat pusing, yang penting kita tahu kondisi keuangan keluarga. Bunda sudah rutin mencatat keuangan belum? Apa nih tantangan terbesarnya? Cerita yuk! 💰📊📈\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #keuangankeluarga #tipskeuangan #aturuang #financialtracker #ibuhemat #finansialsehat",
     "id": "20261029-0903-05",
-    "status": "approved",
+    "status": "failed",
     "scheduled_at": "2026-11-04T12:30:00+07:00",
     "images": [
       "slide_01.jpg",
@@ -1246,7 +1246,7 @@
       "slide_05.jpg"
     ],
     "created_at": "2026-10-29T09:03:54.237871+07:00",
-    "attempts": 2,
+    "attempts": 3,
     "error": "GET me -> kode 200/None API access blocked. Izin kurang. Buat ulang token dengan semua izin (basic, content_publish, manage_insights) diaktifkan."
   },
   {
