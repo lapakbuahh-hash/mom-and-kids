@@ -1962,5 +1962,242 @@
     ],
     "created_at": "2026-11-08T23:53:15.433364+07:00",
     "attempts": 0
+  },
+  {
+    "pillar": "Uang Keluarga",
+    "topic": "Cara sederhana mencatat pengeluaran harian tanpa bikin pusing",
+    "hook": "Catat pengeluaran tiap hari bikin stres?",
+    "subhook": "Yuk coba cara santai biar keuangan tetap aman.",
+    "slides": [
+      {
+        "heading": "Cukup catat di HP aja",
+        "body": "Nggak perlu buku catatan tebal. Pakai aplikasi atau template di HP Bunda sudah cukup banget buat pantau pengeluaran harian."
+      },
+      {
+        "heading": "Jangan tunggu akhir bulan",
+        "body": "Biasakan catat langsung setelah belanja. Lima menit tiap malam cukup kok supaya Bunda nggak lupa pengeluaran receh."
+      },
+      {
+        "heading": "Fokus pada kategori utama",
+        "body": "Pilah pengeluaran jadi tiga saja. Belanja dapur, kebutuhan si kecil, dan tagihan rutin biar lihatnya nggak pusing."
+      }
+    ],
+    "cta_text": "Mau template praktis? Cek link di bio ya Bunda.",
+    "caption": "Sering nggak sih, Bun, merasa uang kok cepat habis padahal cuma belanja sedikit-sedikit? 💸 Tenang, Bunda nggak sendiri kok. Awalnya emang terasa berat buat disiplin catat pengeluaran, tapi kalau sudah terbiasa, rasanya plong banget bisa tahu uang kita lari ke mana. 💛 Coba deh mulai hari ini, nggak usah yang rumit dulu, yang penting konsisten ya. Kalau Bunda biasanya catat pengeluaran pakai cara apa nih, manual atau pakai aplikasi? Cerita di bawah ya, Bun! ✨",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#aturuang",
+      "#keuanganibu",
+      "#ibucerdas",
+      "#tipskeuangan",
+      "#manajemenrumahtangga"
+    ],
+    "full_caption": "Sering nggak sih, Bun, merasa uang kok cepat habis padahal cuma belanja sedikit-sedikit? 💸 Tenang, Bunda nggak sendiri kok. Awalnya emang terasa berat buat disiplin catat pengeluaran, tapi kalau sudah terbiasa, rasanya plong banget bisa tahu uang kita lari ke mana. 💛 Coba deh mulai hari ini, nggak usah yang rumit dulu, yang penting konsisten ya. Kalau Bunda biasanya catat pengeluaran pakai cara apa nih, manual atau pakai aplikasi? Cerita di bawah ya, Bun! ✨\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #aturuang #keuanganibu #ibucerdas #tipskeuangan #manajemenrumahtangga",
+    "id": "20261116-0031-01",
+    "status": "draft",
+    "scheduled_at": "2026-11-17T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-16T00:31:37.464770+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Mengenalkan logika coding tanpa gadget untuk anak",
+    "hook": "Bermain logika tanpa layar, emang bisa?",
+    "subhook": "Bisa banget, cukup pakai kertas dan krayon aja.",
+    "slides": [
+      {
+        "heading": "Apa itu unplugged coding?",
+        "body": "Ini cara seru mengenalkan logika urutan pada si kecil. Tanpa gadget, hanya butuh kertas dan imajinasi."
+      },
+      {
+        "heading": "Mulai dengan perintah sederhana",
+        "body": "Contohnya beri perintah arah, seperti maju dua langkah atau belok kiri untuk mencapai tujuan di gambar."
+      },
+      {
+        "heading": "Latih kesabaran si kecil",
+        "body": "Biar mereka mencoba sendiri dulu ya. Kalau salah, itu bagian dari belajar mencari solusi yang seru banget."
+      }
+    ],
+    "cta_text": "Mau ide seru lainnya? Cek koleksi printable kami ya.",
+    "caption": "Si kecil lagi bosan main itu-itu aja? Mungkin saatnya coba permainan baru yang seru tapi tetap mendidik. 🧸 Unplugged coding ini favorit banget karena bisa bikin si kecil fokus tanpa harus kena paparan layar gadget. 🌈 Bunda tinggal temani mereka sambil santai. Ternyata belajar logika bisa se-asik itu ya buat si kecil. Bunda pernah coba main tebak arah atau urutan langkah belum sama si kecil di rumah? Share pengalamannya yuk! 🌸",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#maindirumah",
+      "#anakcerdas",
+      "#idebermain",
+      "#kegiatanpaud",
+      "#parentingpraktis"
+    ],
+    "full_caption": "Si kecil lagi bosan main itu-itu aja? Mungkin saatnya coba permainan baru yang seru tapi tetap mendidik. 🧸 Unplugged coding ini favorit banget karena bisa bikin si kecil fokus tanpa harus kena paparan layar gadget. 🌈 Bunda tinggal temani mereka sambil santai. Ternyata belajar logika bisa se-asik itu ya buat si kecil. Bunda pernah coba main tebak arah atau urutan langkah belum sama si kecil di rumah? Share pengalamannya yuk! 🌸\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #maindirumah #anakcerdas #idebermain #kegiatanpaud #parentingpraktis",
+    "id": "20261116-0031-02",
+    "status": "draft",
+    "scheduled_at": "2026-11-18T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-16T00:31:37.797481+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Curhat Bunda",
+    "topic": "Menghadapi momen rumah berantakan saat ada anak",
+    "hook": "Rumah berantakan saat si kecil main?",
+    "subhook": "Nggak apa-apa Bun, itu tanda rumah penuh tawa.",
+    "slides": [
+      {
+        "heading": "Jangan paksa rumah selalu rapi",
+        "body": "Wajar banget kalau mainan berceceran di lantai. Itu artinya si kecil sedang asyik bereksplorasi dengan dunianya."
+      },
+      {
+        "heading": "Libatkan si kecil merapikan",
+        "body": "Yuk ajak si kecil beres-beres sambil bernyanyi. Jadikan momen ini waktu seru bareng, bukan beban buat Bunda."
+      },
+      {
+        "heading": "Tarik napas dulu, Bunda",
+        "body": "Kalau sudah lelah, tinggalkan dulu sebentar. Tidak ada yang akan marah kalau rumah belum rapi sempurna hari ini."
+      }
+    ],
+    "cta_text": "Tarik napas yuk, Bunda hebat banget hari ini.",
+    "caption": "Kadang suka sedih sendiri ya, Bun, lihat rumah yang baru diberesin eh sudah berantakan lagi dalam lima menit. 🧸 Tapi kalau diingat-ingat, suara tawa si kecil pas main itu lebih berharga daripada lantai yang kinclong. 💛 Jangan merasa harus jadi supermom yang sempurna setiap saat ya, Bun. Capek itu manusiawi banget. Bunda hari ini sudah berusaha yang terbaik, itu sudah cukup banget kok. Semangat ya, Bun! ✨ Kira-kira apa sih yang bikin Bunda merasa tenang kalau rumah lagi berantakan?",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#curhatbunda",
+      "#ibuhebat",
+      "#selflove",
+      "#parentingtanpadrama",
+      "#ceritabunda",
+      "#momlife"
+    ],
+    "full_caption": "Kadang suka sedih sendiri ya, Bun, lihat rumah yang baru diberesin eh sudah berantakan lagi dalam lima menit. 🧸 Tapi kalau diingat-ingat, suara tawa si kecil pas main itu lebih berharga daripada lantai yang kinclong. 💛 Jangan merasa harus jadi supermom yang sempurna setiap saat ya, Bun. Capek itu manusiawi banget. Bunda hari ini sudah berusaha yang terbaik, itu sudah cukup banget kok. Semangat ya, Bun! ✨ Kira-kira apa sih yang bikin Bunda merasa tenang kalau rumah lagi berantakan?\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #curhatbunda #ibuhebat #selflove #parentingtanpadrama #ceritabunda #momlife",
+    "id": "20261116-0031-03",
+    "status": "draft",
+    "scheduled_at": "2026-11-19T20:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-16T00:31:38.136863+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Main Seru",
+    "topic": "Melatih motorik halus anak dengan aktivitas gunting tempel",
+    "hook": "Si kecil belajar gunting tempel?",
+    "subhook": "Motorik halusnya bakal terlatih makin mantap.",
+    "slides": [
+      {
+        "heading": "Mulai dari pola sederhana",
+        "body": "Ajak si kecil menggunting garis lurus dulu. Jangan langsung yang rumit ya supaya mereka nggak gampang menyerah."
+      },
+      {
+        "heading": "Gunakan gunting khusus anak",
+        "body": "Pilih yang ujungnya tumpul dan aman ya. Ini bikin Bunda lebih tenang saat mendampingi mereka belajar."
+      },
+      {
+        "heading": "Beri pujian sekecil apa pun",
+        "body": "Hasil guntingannya miring sedikit? Nggak apa-apa! Yang penting usahanya sudah luar biasa hebat."
+      }
+    ],
+    "cta_text": "Butuh pola gunting tempel? Cek link di bio ya.",
+    "caption": "Melihat si kecil mulai bisa memegang gunting sendiri itu rasanya gemas banget ya, Bun. ✂️ Kegiatan gunting tempel ini bukan cuma soal kertas terpotong, tapi fokus dan koordinasi mata-tangan si kecil juga lagi diasah lho. 🌟 Bunda bisa siapkan printable yang menarik biar mereka makin semangat. Kalau si kecil lagi fokus gitu, Bunda bisa sambil duduk santai minum teh deh. Si kecil sudah bisa gunting sendiri belum, Bun, atau masih minta bantuan? 🌸",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#motorikhalus",
+      "#kegiatananak",
+      "#belajarkreatif",
+      "#printableanak",
+      "#maindirumah",
+      "#anakaktif"
+    ],
+    "full_caption": "Melihat si kecil mulai bisa memegang gunting sendiri itu rasanya gemas banget ya, Bun. ✂️ Kegiatan gunting tempel ini bukan cuma soal kertas terpotong, tapi fokus dan koordinasi mata-tangan si kecil juga lagi diasah lho. 🌟 Bunda bisa siapkan printable yang menarik biar mereka makin semangat. Kalau si kecil lagi fokus gitu, Bunda bisa sambil duduk santai minum teh deh. Si kecil sudah bisa gunting sendiri belum, Bun, atau masih minta bantuan? 🌸\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #motorikhalus #kegiatananak #belajarkreatif #printableanak #maindirumah #anakaktif",
+    "id": "20261116-0031-04",
+    "status": "draft",
+    "scheduled_at": "2026-11-21T09:00:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-16T00:31:38.468408+07:00",
+    "attempts": 0
+  },
+  {
+    "pillar": "Info Produk",
+    "topic": "Memudahkan manajemen rumah tangga dengan printable worksheets",
+    "hook": "Pusing si kecil bosan di rumah?",
+    "subhook": "Printable worksheets siap bantu Bunda setiap hari.",
+    "slides": [
+      {
+        "heading": "Tidak perlu bingung cari ide",
+        "body": "Bunda tinggal pilih printable yang disukai si kecil. Mulai dari menelusuri garis sampai mengenal huruf ada semua."
+      },
+      {
+        "heading": "Tinggal cetak dan mainkan",
+        "body": "Praktis banget buat Bunda yang sibuk. Kapanpun si kecil ingin main, lembar kerjanya sudah siap dalam hitungan detik."
+      },
+      {
+        "heading": "Belajar sambil bermain santai",
+        "body": "Si kecil jadi punya kegiatan yang bermanfaat. Bunda bisa punya waktu tenang untuk selesaikan pekerjaan rumah lainnya."
+      }
+    ],
+    "cta_text": "Cek koleksi lengkapnya di link bio kita ya.",
+    "caption": "Sering bingung cari kegiatan buat si kecil biar nggak main gadget terus? 📱 Dulu aku juga gitu, Bun, sampai akhirnya nemu cara pakai printable worksheets ini. Beneran ngebantu banget pas lagi mepet waktunya atau pas Bunda lagi butuh fokus sebentar. 🌈 Tinggal print, kasih ke si kecil, dan mereka bisa sibuk sendiri dengan dunianya. Bunda jadi tenang dan si kecil tetap belajar dengan cara seru. Coba cek koleksi printable kita di link bio ya, mungkin ada yang pas buat si kecil. Ada yang sudah pernah pakai printable untuk si kecil di rumah? 💛",
+    "hashtags": [
+      "#pikupiku",
+      "#momandkids",
+      "#parentingindonesia",
+      "#ibumuda",
+      "#belajarsambilbermain",
+      "#printableworksheets",
+      "#solusibunda",
+      "#ibupraktis",
+      "#idebermain",
+      "#anakbelajar"
+    ],
+    "full_caption": "Sering bingung cari kegiatan buat si kecil biar nggak main gadget terus? 📱 Dulu aku juga gitu, Bun, sampai akhirnya nemu cara pakai printable worksheets ini. Beneran ngebantu banget pas lagi mepet waktunya atau pas Bunda lagi butuh fokus sebentar. 🌈 Tinggal print, kasih ke si kecil, dan mereka bisa sibuk sendiri dengan dunianya. Bunda jadi tenang dan si kecil tetap belajar dengan cara seru. Coba cek koleksi printable kita di link bio ya, mungkin ada yang pas buat si kecil. Ada yang sudah pernah pakai printable untuk si kecil di rumah? 💛\n\n#pikupiku #momandkids #parentingindonesia #ibumuda #belajarsambilbermain #printableworksheets #solusibunda #ibupraktis #idebermain #anakbelajar",
+    "id": "20261116-0031-05",
+    "status": "draft",
+    "scheduled_at": "2026-11-22T12:30:00+07:00",
+    "images": [
+      "slide_01.jpg",
+      "slide_02.jpg",
+      "slide_03.jpg",
+      "slide_04.jpg",
+      "slide_05.jpg"
+    ],
+    "created_at": "2026-11-16T00:31:38.799461+07:00",
+    "attempts": 0
   }
 ]
