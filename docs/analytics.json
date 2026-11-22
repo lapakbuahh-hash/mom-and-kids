@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T03:23:32.947744+07:00",
+  "updated": "2026-11-23T03:36:30.183722+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
@@ -26,6 +26,10 @@
     },
     {
       "date": "2026-11-22",
+      "followers": 1
+    },
+    {
+      "date": "2026-11-23",
       "followers": 1
     }
   ],
