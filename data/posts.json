@@ -2201,7 +2201,15 @@
     "attempts": 0,
     "media_id": "18082017905733659",
     "published_at": "2026-11-23T08:20:49.268105+07:00",
-    "permalink": "https://www.instagram.com/p/DgEMAA5FLx8/"
+    "permalink": "https://www.instagram.com/p/DgEMAA5FLx8/",
+    "metrics": {
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saved": 0,
+      "total_interactions": 1
+    }
   },
   {
     "pillar": "Dapur Bunda",

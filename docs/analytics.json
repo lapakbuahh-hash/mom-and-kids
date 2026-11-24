@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-23T03:36:30.183722+07:00",
+  "updated": "2026-11-24T08:29:58.864517+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
     "followers_count": 1,
-    "media_count": 3,
+    "media_count": 4,
     "id": "29923203183936368"
   },
   "followers_history": [
@@ -31,9 +31,29 @@
     {
       "date": "2026-11-23",
       "followers": 1
+    },
+    {
+      "date": "2026-11-24",
+      "followers": 1
     }
   ],
   "posts": [
+    {
+      "id": "20261116-0031-05",
+      "pillar": "Info Produk",
+      "topic": "Memudahkan manajemen rumah tangga dengan printable worksheets",
+      "hook": "Pusing si kecil bosan di rumah?",
+      "published_at": "2026-11-23T08:20:49.268105+07:00",
+      "permalink": "https://www.instagram.com/p/DgEMAA5FLx8/",
+      "metrics": {
+        "reach": 1,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1
+      }
+    },
     {
       "id": "20261029-0903-03",
       "pillar": "Dapur Bunda",
