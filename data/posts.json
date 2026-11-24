@@ -2259,7 +2259,15 @@
     "attempts": 0,
     "media_id": "17917879032517542",
     "published_at": "2026-11-24T09:16:10.694199+07:00",
-    "permalink": "https://www.instagram.com/p/DgG3IlJlgCg/"
+    "permalink": "https://www.instagram.com/p/DgG3IlJlgCg/",
+    "metrics": {
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saved": 0,
+      "total_interactions": 1
+    }
   },
   {
     "pillar": "Curhat Bunda",

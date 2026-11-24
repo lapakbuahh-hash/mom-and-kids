@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-24T08:29:58.864517+07:00",
+  "updated": "2026-11-25T06:24:18.336517+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
     "followers_count": 1,
-    "media_count": 4,
+    "media_count": 5,
     "id": "29923203183936368"
   },
   "followers_history": [
@@ -35,9 +35,29 @@
     {
       "date": "2026-11-24",
       "followers": 1
+    },
+    {
+      "date": "2026-11-25",
+      "followers": 1
     }
   ],
   "posts": [
+    {
+      "id": "20261123-0110-01",
+      "pillar": "Dapur Bunda",
+      "topic": "Trik food prep sederhana agar masak MPASI lebih cepat",
+      "hook": "Masak MPASI tiap hari bikin Bunda pusing?",
+      "published_at": "2026-11-24T09:16:10.694199+07:00",
+      "permalink": "https://www.instagram.com/p/DgG3IlJlgCg/",
+      "metrics": {
+        "reach": 1,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1
+      }
+    },
     {
       "id": "20261116-0031-05",
       "pillar": "Info Produk",
