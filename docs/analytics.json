@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-25T06:24:18.336517+07:00",
+  "updated": "2026-11-26T05:57:53.936342+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
     "followers_count": 1,
-    "media_count": 5,
+    "media_count": 6,
     "id": "29923203183936368"
   },
   "followers_history": [
@@ -39,9 +39,29 @@
     {
       "date": "2026-11-25",
       "followers": 1
+    },
+    {
+      "date": "2026-11-26",
+      "followers": 1
     }
   ],
   "posts": [
+    {
+      "id": "20261123-0110-02",
+      "pillar": "Curhat Bunda",
+      "topic": "Menghadapi fase tantrum anak dengan sabar",
+      "hook": "Capek nggak sih kalau si kecil tantrum di tempat umum?",
+      "published_at": "2026-11-25T22:37:08.211532+07:00",
+      "permalink": "https://www.instagram.com/p/DgK3luzkbNS/",
+      "metrics": {
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0
+      }
+    },
     {
       "id": "20261123-0110-01",
       "pillar": "Dapur Bunda",
