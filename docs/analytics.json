@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T05:50:16.692571+07:00",
+  "updated": "2026-11-28T05:30:37.106594+07:00",
   "brand": "pikupiku",
   "account": {
     "username": "kids.pikupiku",
@@ -47,6 +47,10 @@
     {
       "date": "2026-11-27",
       "followers": 1
+    },
+    {
+      "date": "2026-11-28",
+      "followers": 1
     }
   ],
   "posts": [
@@ -58,12 +62,12 @@
       "published_at": "2026-11-26T22:54:16.611892+07:00",
       "permalink": "https://www.instagram.com/p/DgNeWAxoJax/",
       "metrics": {
-        "reach": 0,
-        "likes": 0,
+        "reach": 1,
+        "likes": 1,
         "comments": 0,
         "shares": 0,
         "saved": 0,
-        "total_interactions": 0
+        "total_interactions": 1
       }
     },
     {
